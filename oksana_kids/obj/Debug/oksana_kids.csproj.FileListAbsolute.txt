@@ -128,3 +128,8 @@ C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_ki
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\Microsoft.DirectX.Direct3D.xml
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\Microsoft.DirectX.xml
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Videos.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\Interop.WMPLib.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csproj.ResolveComReference.cache
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\Interop.WMPLib.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\AxInterop.WMPLib.dll

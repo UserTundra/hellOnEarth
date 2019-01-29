@@ -358,17 +358,18 @@ namespace oksana_kids
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //string item = imageOrVideoDecider(getItemPath());
-            //if (item == "image")
-            //{
-            //    Pictures p = new Pictures(getItemPath(), getDescription());
-            //    p.Show();
-            //}
+            string item = imageOrVideoDecider(getItemPath());
+            if (item == "image")
+            {
+                Pictures p = new Pictures(getItemPath(), getDescription());
+                p.Show();
+            }
+            else { 
+                Videos v = new Videos(getItemPath(), getDescription());
+                v.Show();
+            }
 
-            Videos v = new Videos();
-            v.Show();
-            
-            
+
 
         }
 

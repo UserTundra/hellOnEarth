@@ -34,3 +34,9 @@ C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_ki
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\x86\Debug\oksana_kids.csproj.GenerateResource.Cache
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\x86\Debug\oksana_kids.exe
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\x86\Debug\oksana_kids.pdb
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\x86\Debug\Interop.WMPLib.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\x86\Debug\oksana_kids.csprojResolveAssemblyReference.cache
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\x86\Debug\oksana_kids.csproj.ResolveComReference.cache

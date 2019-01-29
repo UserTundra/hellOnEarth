@@ -14,49 +14,29 @@ namespace oksana_kids
 {
     public partial class Videos : Form
     {
-        Video vdo;
         string desc = "";
-        //string video_path = "";
+        string video_path = "";
 
-        public Videos()
+        public Videos(string path, string description)
         {
-            
-
-            InitializeComponent();
+            if (path == "" || path == null) throw new ArgumentNullException("video");
+            else
+            {
+                video_path = path;
+                desc = description;
+                InitializeComponent();
+            }
         }
 
         private void Videos_Load(object sender, EventArgs e)
         {
+            this.Text = desc;
+            axWindowsMediaPlayer1.URL = video_path;
+            axWindowsMediaPlayer1.Ctlenabled = false;
+            axWindowsMediaPlayer1.Ctlcontrols.play();
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.ShowDialog();
-            openFileDialog.Title = "Select video file..";
-            openFileDialog.InitialDirectory = Application.StartupPath;
-            openFileDialog.DefaultExt = ".avi";
-            openFileDialog.Filter = "Media Files|*.mpg;*.avi;*.wma;*.mov;*.wav;*.mp2;*.mp4;*.mp3|All Files|*.*";
-            if (openFileDialog.FileName != "")
-            {
-                try
-                {
-                    string filename = Path.GetFileNameWithoutExtension(openFileDialog.FileName);
-                    vdo = new Video(filename, true);
-
-                    vdo.Owner = panel1;
-                    panel1.Width = 500;
-                    panel1.Height = 300;
-                    vdo.Play();
-                }
-                catch (Exception r)
-                {
-                    MessageBox.Show(r.StackTrace);
-                    MessageBox.Show(r.Message);
-                }
-
-            }
-        }
+        
     }
 }
