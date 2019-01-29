@@ -1,0 +1,130 @@
+c:\users\дарья\documents\visual studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\oksana_kids.exe.config
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\bd_kids.db
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\oksana_kids.exe
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\oksana_kids.pdb
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\EntityFramework.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\System.Data.SQLite.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\EntityFramework.xml
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\bin\Debug\System.Data.SQLite.xml
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\obj\Debug\oksana_kids.Form1.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\obj\Debug\oksana_kids.Properties.Resources.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\obj\Debug\oksana_kids.csproj.GenerateResource.Cache
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\obj\Debug\oksana_kids.exe
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksana_kids\oksana_kids\obj\Debug\oksana_kids.pdb
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.exe.config
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.exe
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.pdb
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\bd_kids.db
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.exe
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.pdb
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.xml
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.xml
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Properties.Resources.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csproj.GenerateResource.Cache
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\bd_kids.db
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.exe.config
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.exe
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.pdb
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.dll
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.dll
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.dll
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.EF6.dll
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.Linq.dll
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.xml
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.xml
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.xml
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.dll.config
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csprojAssemblyReference.cache
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Form1.resources
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Form2.resources
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Properties.Resources.resources
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csproj.GenerateResource.cache
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csproj.CoreCompileInputs.cache
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csproj.CopyComplete
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.exe
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.pdb
+C:\учеба\C# MVC\DASHA\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Test.TestForm.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Test.TestForm.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.AskToLeaveForm.resources
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.exe.config
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.exe
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.pdb
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\bd_kids.db
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.exe
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.pdb
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.dll
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.dll
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.xml
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.xml
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.AskToLeaveForm.resources
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Form1.resources
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Form2.resources
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Form3.resources
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Properties.Resources.resources
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Test.TestForm.resources
+C:\Users\Дарья\Downloads\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csproj.GenerateResource.Cache
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Pictures.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Test.TestForm2.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Test.TestForm3.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Zoom.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.References.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Personalities.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Tests.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.TeacherSelectionMindow.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.AuthorisationForm.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.PupilSelectionWindow.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.AdaptiveTestConstructor.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\bd_kids.db
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.exe.config
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.exe
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\oksana_kids.pdb
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.dll
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.dll
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.dll
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.EF6.dll
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.Linq.dll
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.xml
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\EntityFramework.SqlServer.xml
+C:\учеба\oksana\oksanas_kids\oksana_kids\bin\Debug\System.Data.SQLite.xml
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.AdaptiveTestConstructor.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.AskToLeaveForm.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.AuthorisationForm.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.PupilSelectionWindow.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.TeacherSelectionMindow.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Personalities.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Pictures.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Properties.Resources.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.References.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Tests.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Test.TestForm3.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Test.TestForm.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Test.TestForm2.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Zoom.resources
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csproj.GenerateResource.cache
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.exe
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.pdb
+C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\Microsoft.DirectX.Direct3D.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\Microsoft.DirectX.dll
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.xml
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\Microsoft.DirectX.Direct3D.xml
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\Microsoft.DirectX.xml
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.Videos.resources

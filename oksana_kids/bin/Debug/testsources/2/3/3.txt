@@ -1,0 +1,8 @@
+Îעלועü ןנוהלועû מגאכüםמי פמנלû
+answer + testsources\2\3\1.jpg
+answer + testsources\2\3\2.jpg
+answer - testsources\2\3\3.jpg
+answer + testsources\2\3\4.jpg
+answer - testsources\2\3\5.jpg
+answer + testsources\2\3\6.jpg
+answer + testsources\2\3\7.jpg

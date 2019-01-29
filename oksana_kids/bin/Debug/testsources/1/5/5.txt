@@ -1,0 +1,6 @@
+Отметь "лишний" предмет
+answer - testsources\1\5\1.png
+answer - testsources\1\5\2.png
+answer + testsources\1\5\3.png
+answer - testsources\1\5\4.png
+answer - testsources\1\5\5.png

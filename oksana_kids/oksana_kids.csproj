@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A248590E-09B1-40E8-B4D0-8CAB48A914B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>oksana_kids</RootNamespace>
+    <AssemblyName>oksana_kids</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.108.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.108.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.108.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdaptiveTestConstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaptiveTestConstructor.Designer.cs">
+      <DependentUpon>AdaptiveTestConstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AskToLeaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AskToLeaveForm.Designer.cs">
+      <DependentUpon>AskToLeaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B01_testing_aims_to_tests.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B02_study_courses_to_pupils_classes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B03_study_subjects_to_courses.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B04_test_tasks_to_study_subjects.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B05_testing_task_modules_to_tests.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSetGender.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSetGender.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSetPupils.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSetPupils.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FileParser.cs" />
+    <Compile Include="AuthorisationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorisationForm.Designer.cs">
+      <DependentUpon>AuthorisationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PupilSelectionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PupilSelectionWindow.Designer.cs">
+      <DependentUpon>PupilSelectionWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherSelectionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherSelectionWindow.Designer.cs">
+      <DependentUpon>TeacherSelectionWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinqWork.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Personalities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personalities.Designer.cs">
+      <DependentUpon>Personalities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pictures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pictures.Designer.cs">
+      <DependentUpon>Pictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="R00_decode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R01_people_category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R02_pupils_classes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R03_testing_types.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R04_end_testing_reasons.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R05_legal_ownership_forms.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R06_testing_aims.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R07_methodical_materials.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R08_study_courses.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R09_study_subjects.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R10_next_action_variants.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R11_variants_of_passing_tasks_results_analysis.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R12_instructions_to_test_tasks_types.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R13_play_result_variants.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R14_track_types.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="R15_task_key_words.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="References.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References.Designer.cs">
+      <DependentUpon>References.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T01_1_pupils.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T01_2_others.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T01_personalities.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T02_tests.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T03_testing_task_modules.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T04_testing_tasks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T05_test_passing_results.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T06_teaching_materials.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T07_soundtracks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T08_audio_video_tracks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T09_comment_variants_on_passing_tasks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T10_organizations.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T11_task_answers.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests.Designer.cs">
+      <DependentUpon>Tests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\AbstractTest.cs" />
+    <Compile Include="Test\TestForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\TestForm3.Designer.cs">
+      <DependentUpon>TestForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Renders\MediaObject.cs" />
+    <Compile Include="Test\Renders\RenderObject.cs" />
+    <Compile Include="Test\SimplyTest.cs" />
+    <Compile Include="Test\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\TestForm2.Designer.cs">
+      <DependentUpon>TestForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Videos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Videos.Designer.cs">
+      <DependentUpon>Videos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zoom.Designer.cs">
+      <DependentUpon>Zoom.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdaptiveTestConstructor.resx">
+      <DependentUpon>AdaptiveTestConstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AskToLeaveForm.resx">
+      <DependentUpon>AskToLeaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorisationForm.resx">
+      <DependentUpon>AuthorisationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PupilSelectionWindow.resx">
+      <DependentUpon>PupilSelectionWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherSelectionWindow.resx">
+      <DependentUpon>TeacherSelectionWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personalities.resx">
+      <DependentUpon>Personalities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pictures.resx">
+      <DependentUpon>Pictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="References.resx">
+      <DependentUpon>References.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests.resx">
+      <DependentUpon>Tests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\TestForm3.resx">
+      <DependentUpon>TestForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\TestForm2.resx">
+      <DependentUpon>TestForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Videos.resx">
+      <DependentUpon>Videos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zoom.resx">
+      <DependentUpon>Zoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bd_kids.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="bd_kidsDataSet.xsc">
+      <DependentUpon>bd_kidsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet.xss">
+      <DependentUpon>bd_kidsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet1.xsc">
+      <DependentUpon>bd_kidsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet1.xss">
+      <DependentUpon>bd_kidsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet2.xsc">
+      <DependentUpon>bd_kidsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet2.xss">
+      <DependentUpon>bd_kidsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet3.xsc">
+      <DependentUpon>bd_kidsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet3.xss">
+      <DependentUpon>bd_kidsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet4.xsc">
+      <DependentUpon>bd_kidsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet4.xss">
+      <DependentUpon>bd_kidsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet5.xsc">
+      <DependentUpon>bd_kidsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet5.xss">
+      <DependentUpon>bd_kidsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet6.xsc">
+      <DependentUpon>bd_kidsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet6.xss">
+      <DependentUpon>bd_kidsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSetGender.xsc">
+      <DependentUpon>bd_kidsDataSetGender.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSetGender.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSetGender.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSetGender.xss">
+      <DependentUpon>bd_kidsDataSetGender.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSetPupils.xsc">
+      <DependentUpon>bd_kidsDataSetPupils.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSetPupils.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSetPupils.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSetPupils.xss">
+      <DependentUpon>bd_kidsDataSetPupils.xsd</DependentUpon>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\password-512.png" />
+    <None Include="pic\lock-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="pic\images.png" />
+    <None Include="pic\kisspng-hola-yo-hablo-espanol-childrens-learn-spanish-b-smile-learning-5a921089370874.5506914115195219292254.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

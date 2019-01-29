@@ -1,0 +1,2433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище bd_kidsModel" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=&quot;C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bd_kids.db&quot;" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="B01_testing_aims_to_tests">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code_aim" Type="integer" />
+          <Property Name="is_main_aim" Type="integer" />
+          <Property Name="id_test" Type="integer" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="B02_study_courses_to_pupils_classes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code_course" Type="integer" />
+          <Property Name="code_class" Type="integer" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="B03_study_subjects_to_courses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code_course" Type="integer" />
+          <Property Name="code_subject" Type="integer" />
+          <Property Name="serial_number_subject" Type="integer" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="B04_test_tasks_to_study_subjects">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_task" Type="integer" />
+          <Property Name="code_subject" Type="integer" />
+          <Property Name="equvivalent_perc" Type="integer" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="B05_testing_task_modules_to_tests">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_test" Type="integer" />
+          <Property Name="id_module" Type="integer" />
+          <Property Name="serial_number_module" Type="integer" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R00_decode">
+          <Key>
+            <PropertyRef Name="code_decode" />
+          </Key>
+          <Property Name="code_decode" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_decode" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="full_name_decode" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R01_people_category">
+          <Key>
+            <PropertyRef Name="code_category" />
+          </Key>
+          <Property Name="code_category" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_category" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R02_pupils_classes">
+          <Key>
+            <PropertyRef Name="code_class" />
+          </Key>
+          <Property Name="code_class" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_class" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="study_years" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R03_testing_types">
+          <Key>
+            <PropertyRef Name="code_type" />
+          </Key>
+          <Property Name="code_type" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_type" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R04_end_testing_reasons">
+          <Key>
+            <PropertyRef Name="code_end_reason" />
+          </Key>
+          <Property Name="code_end_reason" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_end_reason" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R05_legal_ownership_forms">
+          <Key>
+            <PropertyRef Name="code_ownership" />
+          </Key>
+          <Property Name="code_ownership" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_ownership" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R06_testing_aims">
+          <Key>
+            <PropertyRef Name="code_aim" />
+          </Key>
+          <Property Name="code_aim" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_aim" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R07_methodical_materials">
+          <Key>
+            <PropertyRef Name="id_method_material" />
+          </Key>
+          <Property Name="id_method_material" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="file_location" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R08_study_courses">
+          <Key>
+            <PropertyRef Name="code_course" />
+          </Key>
+          <Property Name="code_course" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_course" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R09_study_subjects">
+          <Key>
+            <PropertyRef Name="code_subject" />
+          </Key>
+          <Property Name="code_subject" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_subject" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="academ_hours" Type="integer" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R10_next_action_variants">
+          <Key>
+            <PropertyRef Name="code_action" />
+          </Key>
+          <Property Name="code_action" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_action" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R11_variants_of_passing_tasks_results_analysis">
+          <Key>
+            <PropertyRef Name="code_variant" />
+          </Key>
+          <Property Name="code_variant" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_variant" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R12_instructions_to_test_tasks_types">
+          <Key>
+            <PropertyRef Name="code_instruction" />
+          </Key>
+          <Property Name="code_instruction" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_instruction" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R13_play_result_variants">
+          <Key>
+            <PropertyRef Name="code_play_result" />
+          </Key>
+          <Property Name="code_play_result" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_play_result" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R14_track_types">
+          <Key>
+            <PropertyRef Name="code_type" />
+          </Key>
+          <Property Name="code_type" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_type" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="R15_task_key_words">
+          <Key>
+            <PropertyRef Name="code_key_word" />
+          </Key>
+          <Property Name="code_key_word" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_key_word" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T01_personalities">
+          <Key>
+            <PropertyRef Name="id_person" />
+          </Key>
+          <Property Name="id_person" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="patronymic" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="date_birth" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="gender" Type="integer" />
+          <Property Name="code_category" Type="integer" />
+          <Property Name="id_org" Type="integer" />
+          <Property Name="code_class" Type="integer" />
+          <Property Name="login" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="password" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="date_updating" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T02_tests">
+          <Key>
+            <PropertyRef Name="id_test" />
+          </Key>
+          <Property Name="id_test" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_test" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="id_method_material" Type="integer" />
+          <Property Name="id_author" Type="integer" />
+          <Property Name="date_create" Type="datetime" />
+          <Property Name="date_correct" Type="datetime" />
+          <Property Name="max_passing_duration_sec" Type="integer" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="id_teach_material" Type="integer" />
+        </EntityType>
+        <EntityType Name="T03_testing_task_modules">
+          <Key>
+            <PropertyRef Name="id_module" />
+          </Key>
+          <Property Name="id_module" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_track" Type="integer" />
+          <Property Name="id_av_track" Type="integer" />
+          <Property Name="code_instruction" Type="integer" />
+          <Property Name="id_task" Type="integer" />
+          <Property Name="code_variant" Type="integer" />
+          <Property Name="id_comment" Type="integer" />
+          <Property Name="comment_view_duration_sec" Type="integer" />
+          <Property Name="max_passing_duration_sec" Type="integer" />
+          <Property Name="code_action" Type="integer" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T04_testing_tasks">
+          <Key>
+            <PropertyRef Name="id_task" />
+          </Key>
+          <Property Name="id_task" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_task" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="id_author" Type="integer" />
+          <Property Name="date_create" Type="datetime" />
+          <Property Name="date_correct" Type="datetime" />
+          <Property Name="code_type" Type="integer" />
+          <Property Name="file_location" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T05_test_passing_results">
+          <Key>
+            <PropertyRef Name="id_result" />
+          </Key>
+          <Property Name="id_result" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_person" Type="integer" />
+          <Property Name="id_test" Type="integer" />
+          <Property Name="date_testing" Type="datetime" />
+          <Property Name="time_start" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="time_end" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="code_end_reason" Type="integer" />
+          <Property Name="amount_passing_tests" Type="integer" />
+          <Property Name="perc_totally_right" Type="real" />
+          <Property Name="perc_partially_right" Type="real" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T06_teaching_materials">
+          <Key>
+            <PropertyRef Name="id_teach_material" />
+          </Key>
+          <Property Name="id_teach_material" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="file_location" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="author" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="source" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T07_soundtracks">
+          <Key>
+            <PropertyRef Name="id_track" />
+          </Key>
+          <Property Name="id_track" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_track" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="duration_sec" Type="integer" />
+          <Property Name="id_announcer" Type="integer" />
+          <Property Name="file_location" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T08_audio_video_tracks">
+          <Key>
+            <PropertyRef Name="id_av_track" />
+          </Key>
+          <Property Name="id_av_track" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_av_track" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="code_type" Type="integer" />
+          <Property Name="author" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="duration_sec" Type="integer" />
+          <Property Name="source" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="image_size_pix" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="filesize" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="date_create" Type="datetime" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T09_comment_variants_on_passing_tasks">
+          <Key>
+            <PropertyRef Name="id_comment" />
+          </Key>
+          <Property Name="id_comment" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code_play_result" Type="integer" />
+          <Property Name="is_av_track" Type="integer" />
+          <Property Name="file_location" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T10_organizations">
+          <Key>
+            <PropertyRef Name="id_org" />
+          </Key>
+          <Property Name="id_org" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="full_name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="short_name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="code_ownership" Type="integer" />
+          <Property Name="address" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="contact_info" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="web_site" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="T11_task_answers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_task" Type="integer" />
+          <Property Name="code_key_word" Type="integer" />
+          <Property Name="string_value" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="image_value" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="sound_value" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="is_correct" Type="integer" />
+          <Property Name="group_no" Type="integer" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "main.T01_1_pupils" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="T01_1_pupils">
+          <Key>
+            <PropertyRef Name="id_person" />
+          </Key>
+          <Property Name="id_person" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="patronymic" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="date_birth" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_decode" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_category" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_class" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="short_name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="login" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="password" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="date_updating" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "main.T01_2_others" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="T01_2_others">
+          <Key>
+            <PropertyRef Name="id_person" />
+          </Key>
+          <Property Name="id_person" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="patronymic" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="date_birth" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_decode" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_category" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="short_name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="login" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="password" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="date_updating" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <Association Name="FK_B01_testing_aims_to_tests_0_0">
+          <End Role="R06_testing_aims" Type="Self.R06_testing_aims" Multiplicity="0..1" />
+          <End Role="B01_testing_aims_to_tests" Type="Self.B01_testing_aims_to_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R06_testing_aims">
+              <PropertyRef Name="code_aim" />
+            </Principal>
+            <Dependent Role="B01_testing_aims_to_tests">
+              <PropertyRef Name="code_aim" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B01_testing_aims_to_tests_1_0">
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="0..1" />
+          <End Role="B01_testing_aims_to_tests" Type="Self.B01_testing_aims_to_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T02_tests">
+              <PropertyRef Name="id_test" />
+            </Principal>
+            <Dependent Role="B01_testing_aims_to_tests">
+              <PropertyRef Name="id_test" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B02_study_courses_to_pupils_classes_0_0">
+          <End Role="R02_pupils_classes" Type="Self.R02_pupils_classes" Multiplicity="0..1" />
+          <End Role="B02_study_courses_to_pupils_classes" Type="Self.B02_study_courses_to_pupils_classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R02_pupils_classes">
+              <PropertyRef Name="code_class" />
+            </Principal>
+            <Dependent Role="B02_study_courses_to_pupils_classes">
+              <PropertyRef Name="code_class" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B02_study_courses_to_pupils_classes_1_0">
+          <End Role="R08_study_courses" Type="Self.R08_study_courses" Multiplicity="0..1" />
+          <End Role="B02_study_courses_to_pupils_classes" Type="Self.B02_study_courses_to_pupils_classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R08_study_courses">
+              <PropertyRef Name="code_course" />
+            </Principal>
+            <Dependent Role="B02_study_courses_to_pupils_classes">
+              <PropertyRef Name="code_course" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B03_study_subjects_to_courses_0_0">
+          <End Role="R09_study_subjects" Type="Self.R09_study_subjects" Multiplicity="0..1" />
+          <End Role="B03_study_subjects_to_courses" Type="Self.B03_study_subjects_to_courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R09_study_subjects">
+              <PropertyRef Name="code_subject" />
+            </Principal>
+            <Dependent Role="B03_study_subjects_to_courses">
+              <PropertyRef Name="code_subject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B03_study_subjects_to_courses_1_0">
+          <End Role="R08_study_courses" Type="Self.R08_study_courses" Multiplicity="0..1" />
+          <End Role="B03_study_subjects_to_courses" Type="Self.B03_study_subjects_to_courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R08_study_courses">
+              <PropertyRef Name="code_course" />
+            </Principal>
+            <Dependent Role="B03_study_subjects_to_courses">
+              <PropertyRef Name="code_course" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B04_test_tasks_to_study_subjects_0_0">
+          <End Role="R09_study_subjects" Type="Self.R09_study_subjects" Multiplicity="0..1" />
+          <End Role="B04_test_tasks_to_study_subjects" Type="Self.B04_test_tasks_to_study_subjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R09_study_subjects">
+              <PropertyRef Name="code_subject" />
+            </Principal>
+            <Dependent Role="B04_test_tasks_to_study_subjects">
+              <PropertyRef Name="code_subject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B04_test_tasks_to_study_subjects_1_0">
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="0..1" />
+          <End Role="B04_test_tasks_to_study_subjects" Type="Self.B04_test_tasks_to_study_subjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T04_testing_tasks">
+              <PropertyRef Name="id_task" />
+            </Principal>
+            <Dependent Role="B04_test_tasks_to_study_subjects">
+              <PropertyRef Name="id_task" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B05_testing_task_modules_to_tests_0_0">
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="0..1" />
+          <End Role="B05_testing_task_modules_to_tests" Type="Self.B05_testing_task_modules_to_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T03_testing_task_modules">
+              <PropertyRef Name="id_module" />
+            </Principal>
+            <Dependent Role="B05_testing_task_modules_to_tests">
+              <PropertyRef Name="id_module" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B05_testing_task_modules_to_tests_1_0">
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="0..1" />
+          <End Role="B05_testing_task_modules_to_tests" Type="Self.B05_testing_task_modules_to_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T02_tests">
+              <PropertyRef Name="id_test" />
+            </Principal>
+            <Dependent Role="B05_testing_task_modules_to_tests">
+              <PropertyRef Name="id_test" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T01_personalities_0_0">
+          <End Role="T10_organizations" Type="Self.T10_organizations" Multiplicity="0..1" />
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T10_organizations">
+              <PropertyRef Name="id_org" />
+            </Principal>
+            <Dependent Role="T01_personalities">
+              <PropertyRef Name="id_org" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T01_personalities_1_0">
+          <End Role="R01_people_category" Type="Self.R01_people_category" Multiplicity="0..1" />
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R01_people_category">
+              <PropertyRef Name="code_category" />
+            </Principal>
+            <Dependent Role="T01_personalities">
+              <PropertyRef Name="code_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T01_personalities_2_0">
+          <End Role="R02_pupils_classes" Type="Self.R02_pupils_classes" Multiplicity="0..1" />
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R02_pupils_classes">
+              <PropertyRef Name="code_class" />
+            </Principal>
+            <Dependent Role="T01_personalities">
+              <PropertyRef Name="code_class" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T02_tests_0_0">
+          <End Role="T06_teaching_materials" Type="Self.T06_teaching_materials" Multiplicity="0..1" />
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T06_teaching_materials">
+              <PropertyRef Name="id_teach_material" />
+            </Principal>
+            <Dependent Role="T02_tests">
+              <PropertyRef Name="id_teach_material" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T02_tests_1_0">
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T01_personalities">
+              <PropertyRef Name="id_person" />
+            </Principal>
+            <Dependent Role="T02_tests">
+              <PropertyRef Name="id_author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T02_tests_2_0">
+          <End Role="R07_methodical_materials" Type="Self.R07_methodical_materials" Multiplicity="0..1" />
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R07_methodical_materials">
+              <PropertyRef Name="id_method_material" />
+            </Principal>
+            <Dependent Role="T02_tests">
+              <PropertyRef Name="id_method_material" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_0_0">
+          <End Role="R12_instructions_to_test_tasks_types" Type="Self.R12_instructions_to_test_tasks_types" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R12_instructions_to_test_tasks_types">
+              <PropertyRef Name="code_instruction" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="code_instruction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_1_0">
+          <End Role="R11_variants_of_passing_tasks_results_analysis" Type="Self.R11_variants_of_passing_tasks_results_analysis" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R11_variants_of_passing_tasks_results_analysis">
+              <PropertyRef Name="code_variant" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="code_variant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_2_0">
+          <End Role="T07_soundtracks" Type="Self.T07_soundtracks" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T07_soundtracks">
+              <PropertyRef Name="id_track" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="id_track" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_3_0">
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T04_testing_tasks">
+              <PropertyRef Name="id_task" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="id_task" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_4_0">
+          <End Role="T08_audio_video_tracks" Type="Self.T08_audio_video_tracks" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T08_audio_video_tracks">
+              <PropertyRef Name="id_av_track" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="id_av_track" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_5_0">
+          <End Role="T09_comment_variants_on_passing_tasks" Type="Self.T09_comment_variants_on_passing_tasks" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T09_comment_variants_on_passing_tasks">
+              <PropertyRef Name="id_comment" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="id_comment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_6_0">
+          <End Role="R10_next_action_variants" Type="Self.R10_next_action_variants" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R10_next_action_variants">
+              <PropertyRef Name="code_action" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="code_action" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T04_testing_tasks_0_0">
+          <End Role="R03_testing_types" Type="Self.R03_testing_types" Multiplicity="0..1" />
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R03_testing_types">
+              <PropertyRef Name="code_type" />
+            </Principal>
+            <Dependent Role="T04_testing_tasks">
+              <PropertyRef Name="code_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T04_testing_tasks_1_0">
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T01_personalities">
+              <PropertyRef Name="id_person" />
+            </Principal>
+            <Dependent Role="T04_testing_tasks">
+              <PropertyRef Name="id_author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T05_test_passing_results_0_0">
+          <End Role="R04_end_testing_reasons" Type="Self.R04_end_testing_reasons" Multiplicity="0..1" />
+          <End Role="T05_test_passing_results" Type="Self.T05_test_passing_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R04_end_testing_reasons">
+              <PropertyRef Name="code_end_reason" />
+            </Principal>
+            <Dependent Role="T05_test_passing_results">
+              <PropertyRef Name="code_end_reason" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T05_test_passing_results_1_0">
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="0..1" />
+          <End Role="T05_test_passing_results" Type="Self.T05_test_passing_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T02_tests">
+              <PropertyRef Name="id_test" />
+            </Principal>
+            <Dependent Role="T05_test_passing_results">
+              <PropertyRef Name="id_test" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T05_test_passing_results_2_0">
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
+          <End Role="T05_test_passing_results" Type="Self.T05_test_passing_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T01_personalities">
+              <PropertyRef Name="id_person" />
+            </Principal>
+            <Dependent Role="T05_test_passing_results">
+              <PropertyRef Name="id_person" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T07_soundtracks_0_0">
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
+          <End Role="T07_soundtracks" Type="Self.T07_soundtracks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T01_personalities">
+              <PropertyRef Name="id_person" />
+            </Principal>
+            <Dependent Role="T07_soundtracks">
+              <PropertyRef Name="id_announcer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T08_audio_video_tracks_0_0">
+          <End Role="R14_track_types" Type="Self.R14_track_types" Multiplicity="0..1" />
+          <End Role="T08_audio_video_tracks" Type="Self.T08_audio_video_tracks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R14_track_types">
+              <PropertyRef Name="code_type" />
+            </Principal>
+            <Dependent Role="T08_audio_video_tracks">
+              <PropertyRef Name="code_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T09_comment_variants_on_passing_tasks_0_0">
+          <End Role="R13_play_result_variants" Type="Self.R13_play_result_variants" Multiplicity="0..1" />
+          <End Role="T09_comment_variants_on_passing_tasks" Type="Self.T09_comment_variants_on_passing_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R13_play_result_variants">
+              <PropertyRef Name="code_play_result" />
+            </Principal>
+            <Dependent Role="T09_comment_variants_on_passing_tasks">
+              <PropertyRef Name="code_play_result" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T10_organizations_0_0">
+          <End Role="R05_legal_ownership_forms" Type="Self.R05_legal_ownership_forms" Multiplicity="0..1" />
+          <End Role="T10_organizations" Type="Self.T10_organizations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R05_legal_ownership_forms">
+              <PropertyRef Name="code_ownership" />
+            </Principal>
+            <Dependent Role="T10_organizations">
+              <PropertyRef Name="code_ownership" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T11_task_answers_0_0">
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="0..1" />
+          <End Role="T11_task_answers" Type="Self.T11_task_answers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T04_testing_tasks">
+              <PropertyRef Name="id_task" />
+            </Principal>
+            <Dependent Role="T11_task_answers">
+              <PropertyRef Name="id_task" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T11_task_answers_1_0">
+          <End Role="R15_task_key_words" Type="Self.R15_task_key_words" Multiplicity="0..1" />
+          <End Role="T11_task_answers" Type="Self.T11_task_answers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R15_task_key_words">
+              <PropertyRef Name="code_key_word" />
+            </Principal>
+            <Dependent Role="T11_task_answers">
+              <PropertyRef Name="code_key_word" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище bd_kidsModelContainer">
+          <EntitySet Name="B01_testing_aims_to_tests" EntityType="Self.B01_testing_aims_to_tests" store:Type="Tables" />
+          <EntitySet Name="B02_study_courses_to_pupils_classes" EntityType="Self.B02_study_courses_to_pupils_classes" store:Type="Tables" />
+          <EntitySet Name="B03_study_subjects_to_courses" EntityType="Self.B03_study_subjects_to_courses" store:Type="Tables" />
+          <EntitySet Name="B04_test_tasks_to_study_subjects" EntityType="Self.B04_test_tasks_to_study_subjects" store:Type="Tables" />
+          <EntitySet Name="B05_testing_task_modules_to_tests" EntityType="Self.B05_testing_task_modules_to_tests" store:Type="Tables" />
+          <EntitySet Name="R00_decode" EntityType="Self.R00_decode" store:Type="Tables" />
+          <EntitySet Name="R01_people_category" EntityType="Self.R01_people_category" store:Type="Tables" />
+          <EntitySet Name="R02_pupils_classes" EntityType="Self.R02_pupils_classes" store:Type="Tables" />
+          <EntitySet Name="R03_testing_types" EntityType="Self.R03_testing_types" store:Type="Tables" />
+          <EntitySet Name="R04_end_testing_reasons" EntityType="Self.R04_end_testing_reasons" store:Type="Tables" />
+          <EntitySet Name="R05_legal_ownership_forms" EntityType="Self.R05_legal_ownership_forms" store:Type="Tables" />
+          <EntitySet Name="R06_testing_aims" EntityType="Self.R06_testing_aims" store:Type="Tables" />
+          <EntitySet Name="R07_methodical_materials" EntityType="Self.R07_methodical_materials" store:Type="Tables" />
+          <EntitySet Name="R08_study_courses" EntityType="Self.R08_study_courses" store:Type="Tables" />
+          <EntitySet Name="R09_study_subjects" EntityType="Self.R09_study_subjects" store:Type="Tables" />
+          <EntitySet Name="R10_next_action_variants" EntityType="Self.R10_next_action_variants" store:Type="Tables" />
+          <EntitySet Name="R11_variants_of_passing_tasks_results_analysis" EntityType="Self.R11_variants_of_passing_tasks_results_analysis" store:Type="Tables" />
+          <EntitySet Name="R12_instructions_to_test_tasks_types" EntityType="Self.R12_instructions_to_test_tasks_types" store:Type="Tables" />
+          <EntitySet Name="R13_play_result_variants" EntityType="Self.R13_play_result_variants" store:Type="Tables" />
+          <EntitySet Name="R14_track_types" EntityType="Self.R14_track_types" store:Type="Tables" />
+          <EntitySet Name="R15_task_key_words" EntityType="Self.R15_task_key_words" store:Type="Tables" />
+          <EntitySet Name="T01_personalities" EntityType="Self.T01_personalities" store:Type="Tables" />
+          <EntitySet Name="T02_tests" EntityType="Self.T02_tests" store:Type="Tables" />
+          <EntitySet Name="T03_testing_task_modules" EntityType="Self.T03_testing_task_modules" store:Type="Tables" />
+          <EntitySet Name="T04_testing_tasks" EntityType="Self.T04_testing_tasks" store:Type="Tables" />
+          <EntitySet Name="T05_test_passing_results" EntityType="Self.T05_test_passing_results" store:Type="Tables" />
+          <EntitySet Name="T06_teaching_materials" EntityType="Self.T06_teaching_materials" store:Type="Tables" />
+          <EntitySet Name="T07_soundtracks" EntityType="Self.T07_soundtracks" store:Type="Tables" />
+          <EntitySet Name="T08_audio_video_tracks" EntityType="Self.T08_audio_video_tracks" store:Type="Tables" />
+          <EntitySet Name="T09_comment_variants_on_passing_tasks" EntityType="Self.T09_comment_variants_on_passing_tasks" store:Type="Tables" />
+          <EntitySet Name="T10_organizations" EntityType="Self.T10_organizations" store:Type="Tables" />
+          <EntitySet Name="T11_task_answers" EntityType="Self.T11_task_answers" store:Type="Tables" />
+          <EntitySet Name="T01_1_pupils" EntityType="Self.T01_1_pupils" store:Type="Views">
+            <DefiningQuery>SELECT 
+[T01_1_pupils].[id_person] AS [id_person], 
+[T01_1_pupils].[surname] AS [surname], 
+[T01_1_pupils].[name] AS [name], 
+[T01_1_pupils].[patronymic] AS [patronymic], 
+[T01_1_pupils].[date_birth] AS [date_birth], 
+[T01_1_pupils].[name_decode] AS [name_decode], 
+[T01_1_pupils].[name_category] AS [name_category], 
+[T01_1_pupils].[name_class] AS [name_class], 
+[T01_1_pupils].[short_name] AS [short_name], 
+[T01_1_pupils].[login] AS [login], 
+[T01_1_pupils].[password] AS [password], 
+[T01_1_pupils].[date_updating] AS [date_updating], 
+[T01_1_pupils].[note] AS [note]
+FROM [T01_1_pupils] AS [T01_1_pupils]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="T01_2_others" EntityType="Self.T01_2_others" store:Type="Views">
+            <DefiningQuery>SELECT 
+[T01_2_others].[id_person] AS [id_person], 
+[T01_2_others].[surname] AS [surname], 
+[T01_2_others].[name] AS [name], 
+[T01_2_others].[patronymic] AS [patronymic], 
+[T01_2_others].[date_birth] AS [date_birth], 
+[T01_2_others].[name_decode] AS [name_decode], 
+[T01_2_others].[name_category] AS [name_category], 
+[T01_2_others].[short_name] AS [short_name], 
+[T01_2_others].[login] AS [login], 
+[T01_2_others].[password] AS [password], 
+[T01_2_others].[date_updating] AS [date_updating], 
+[T01_2_others].[note] AS [note]
+FROM [T01_2_others] AS [T01_2_others]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_B01_testing_aims_to_tests_0_0" Association="Self.FK_B01_testing_aims_to_tests_0_0">
+            <End Role="R06_testing_aims" EntitySet="R06_testing_aims" />
+            <End Role="B01_testing_aims_to_tests" EntitySet="B01_testing_aims_to_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B01_testing_aims_to_tests_1_0" Association="Self.FK_B01_testing_aims_to_tests_1_0">
+            <End Role="T02_tests" EntitySet="T02_tests" />
+            <End Role="B01_testing_aims_to_tests" EntitySet="B01_testing_aims_to_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B02_study_courses_to_pupils_classes_0_0" Association="Self.FK_B02_study_courses_to_pupils_classes_0_0">
+            <End Role="R02_pupils_classes" EntitySet="R02_pupils_classes" />
+            <End Role="B02_study_courses_to_pupils_classes" EntitySet="B02_study_courses_to_pupils_classes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B02_study_courses_to_pupils_classes_1_0" Association="Self.FK_B02_study_courses_to_pupils_classes_1_0">
+            <End Role="R08_study_courses" EntitySet="R08_study_courses" />
+            <End Role="B02_study_courses_to_pupils_classes" EntitySet="B02_study_courses_to_pupils_classes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B03_study_subjects_to_courses_0_0" Association="Self.FK_B03_study_subjects_to_courses_0_0">
+            <End Role="R09_study_subjects" EntitySet="R09_study_subjects" />
+            <End Role="B03_study_subjects_to_courses" EntitySet="B03_study_subjects_to_courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B03_study_subjects_to_courses_1_0" Association="Self.FK_B03_study_subjects_to_courses_1_0">
+            <End Role="R08_study_courses" EntitySet="R08_study_courses" />
+            <End Role="B03_study_subjects_to_courses" EntitySet="B03_study_subjects_to_courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B04_test_tasks_to_study_subjects_0_0" Association="Self.FK_B04_test_tasks_to_study_subjects_0_0">
+            <End Role="R09_study_subjects" EntitySet="R09_study_subjects" />
+            <End Role="B04_test_tasks_to_study_subjects" EntitySet="B04_test_tasks_to_study_subjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B04_test_tasks_to_study_subjects_1_0" Association="Self.FK_B04_test_tasks_to_study_subjects_1_0">
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+            <End Role="B04_test_tasks_to_study_subjects" EntitySet="B04_test_tasks_to_study_subjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B05_testing_task_modules_to_tests_0_0" Association="Self.FK_B05_testing_task_modules_to_tests_0_0">
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+            <End Role="B05_testing_task_modules_to_tests" EntitySet="B05_testing_task_modules_to_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B05_testing_task_modules_to_tests_1_0" Association="Self.FK_B05_testing_task_modules_to_tests_1_0">
+            <End Role="T02_tests" EntitySet="T02_tests" />
+            <End Role="B05_testing_task_modules_to_tests" EntitySet="B05_testing_task_modules_to_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T01_personalities_0_0" Association="Self.FK_T01_personalities_0_0">
+            <End Role="T10_organizations" EntitySet="T10_organizations" />
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T01_personalities_1_0" Association="Self.FK_T01_personalities_1_0">
+            <End Role="R01_people_category" EntitySet="R01_people_category" />
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T01_personalities_2_0" Association="Self.FK_T01_personalities_2_0">
+            <End Role="R02_pupils_classes" EntitySet="R02_pupils_classes" />
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T02_tests_0_0" Association="Self.FK_T02_tests_0_0">
+            <End Role="T06_teaching_materials" EntitySet="T06_teaching_materials" />
+            <End Role="T02_tests" EntitySet="T02_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T02_tests_1_0" Association="Self.FK_T02_tests_1_0">
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="T02_tests" EntitySet="T02_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T02_tests_2_0" Association="Self.FK_T02_tests_2_0">
+            <End Role="R07_methodical_materials" EntitySet="R07_methodical_materials" />
+            <End Role="T02_tests" EntitySet="T02_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_0_0" Association="Self.FK_T03_testing_task_modules_0_0">
+            <End Role="R12_instructions_to_test_tasks_types" EntitySet="R12_instructions_to_test_tasks_types" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_1_0" Association="Self.FK_T03_testing_task_modules_1_0">
+            <End Role="R11_variants_of_passing_tasks_results_analysis" EntitySet="R11_variants_of_passing_tasks_results_analysis" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_2_0" Association="Self.FK_T03_testing_task_modules_2_0">
+            <End Role="T07_soundtracks" EntitySet="T07_soundtracks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_3_0" Association="Self.FK_T03_testing_task_modules_3_0">
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_4_0" Association="Self.FK_T03_testing_task_modules_4_0">
+            <End Role="T08_audio_video_tracks" EntitySet="T08_audio_video_tracks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_5_0" Association="Self.FK_T03_testing_task_modules_5_0">
+            <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_6_0" Association="Self.FK_T03_testing_task_modules_6_0">
+            <End Role="R10_next_action_variants" EntitySet="R10_next_action_variants" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T04_testing_tasks_0_0" Association="Self.FK_T04_testing_tasks_0_0">
+            <End Role="R03_testing_types" EntitySet="R03_testing_types" />
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T04_testing_tasks_1_0" Association="Self.FK_T04_testing_tasks_1_0">
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T05_test_passing_results_0_0" Association="Self.FK_T05_test_passing_results_0_0">
+            <End Role="R04_end_testing_reasons" EntitySet="R04_end_testing_reasons" />
+            <End Role="T05_test_passing_results" EntitySet="T05_test_passing_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T05_test_passing_results_1_0" Association="Self.FK_T05_test_passing_results_1_0">
+            <End Role="T02_tests" EntitySet="T02_tests" />
+            <End Role="T05_test_passing_results" EntitySet="T05_test_passing_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T05_test_passing_results_2_0" Association="Self.FK_T05_test_passing_results_2_0">
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="T05_test_passing_results" EntitySet="T05_test_passing_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T07_soundtracks_0_0" Association="Self.FK_T07_soundtracks_0_0">
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="T07_soundtracks" EntitySet="T07_soundtracks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T08_audio_video_tracks_0_0" Association="Self.FK_T08_audio_video_tracks_0_0">
+            <End Role="R14_track_types" EntitySet="R14_track_types" />
+            <End Role="T08_audio_video_tracks" EntitySet="T08_audio_video_tracks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T09_comment_variants_on_passing_tasks_0_0" Association="Self.FK_T09_comment_variants_on_passing_tasks_0_0">
+            <End Role="R13_play_result_variants" EntitySet="R13_play_result_variants" />
+            <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T10_organizations_0_0" Association="Self.FK_T10_organizations_0_0">
+            <End Role="R05_legal_ownership_forms" EntitySet="R05_legal_ownership_forms" />
+            <End Role="T10_organizations" EntitySet="T10_organizations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T11_task_answers_0_0" Association="Self.FK_T11_task_answers_0_0">
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+            <End Role="T11_task_answers" EntitySet="T11_task_answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T11_task_answers_1_0" Association="Self.FK_T11_task_answers_1_0">
+            <End Role="R15_task_key_words" EntitySet="R15_task_key_words" />
+            <End Role="T11_task_answers" EntitySet="T11_task_answers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bd_kidsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="B01_testing_aims_to_tests">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code_aim" Type="Int64" />
+          <Property Name="is_main_aim" Type="Int64" />
+          <Property Name="id_test" Type="Int64" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="R06_testing_aims" Relationship="Self.FK_B01_testing_aims_to_tests_0_0" FromRole="B01_testing_aims_to_tests" ToRole="R06_testing_aims" />
+          <NavigationProperty Name="T02_tests" Relationship="Self.FK_B01_testing_aims_to_tests_1_0" FromRole="B01_testing_aims_to_tests" ToRole="T02_tests" />
+        </EntityType>
+        <EntityType Name="B02_study_courses_to_pupils_classes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code_course" Type="Int64" />
+          <Property Name="code_class" Type="Int64" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="R02_pupils_classes" Relationship="Self.FK_B02_study_courses_to_pupils_classes_0_0" FromRole="B02_study_courses_to_pupils_classes" ToRole="R02_pupils_classes" />
+          <NavigationProperty Name="R08_study_courses" Relationship="Self.FK_B02_study_courses_to_pupils_classes_1_0" FromRole="B02_study_courses_to_pupils_classes" ToRole="R08_study_courses" />
+        </EntityType>
+        <EntityType Name="B03_study_subjects_to_courses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code_course" Type="Int64" />
+          <Property Name="code_subject" Type="Int64" />
+          <Property Name="serial_number_subject" Type="Int64" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="R09_study_subjects" Relationship="Self.FK_B03_study_subjects_to_courses_0_0" FromRole="B03_study_subjects_to_courses" ToRole="R09_study_subjects" />
+          <NavigationProperty Name="R08_study_courses" Relationship="Self.FK_B03_study_subjects_to_courses_1_0" FromRole="B03_study_subjects_to_courses" ToRole="R08_study_courses" />
+        </EntityType>
+        <EntityType Name="B04_test_tasks_to_study_subjects">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_task" Type="Int64" />
+          <Property Name="code_subject" Type="Int64" />
+          <Property Name="equvivalent_perc" Type="Int64" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="R09_study_subjects" Relationship="Self.FK_B04_test_tasks_to_study_subjects_0_0" FromRole="B04_test_tasks_to_study_subjects" ToRole="R09_study_subjects" />
+          <NavigationProperty Name="T04_testing_tasks" Relationship="Self.FK_B04_test_tasks_to_study_subjects_1_0" FromRole="B04_test_tasks_to_study_subjects" ToRole="T04_testing_tasks" />
+        </EntityType>
+        <EntityType Name="B05_testing_task_modules_to_tests">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_test" Type="Int64" />
+          <Property Name="id_module" Type="Int64" />
+          <Property Name="serial_number_module" Type="Int64" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_B05_testing_task_modules_to_tests_0_0" FromRole="B05_testing_task_modules_to_tests" ToRole="T03_testing_task_modules" />
+          <NavigationProperty Name="T02_tests" Relationship="Self.FK_B05_testing_task_modules_to_tests_1_0" FromRole="B05_testing_task_modules_to_tests" ToRole="T02_tests" />
+        </EntityType>
+        <EntityType Name="R01_people_category">
+          <Key>
+            <PropertyRef Name="code_category" />
+          </Key>
+          <Property Name="code_category" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_category" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T01_personalities_1_0" FromRole="R01_people_category" ToRole="T01_personalities" />
+        </EntityType>
+        <EntityType Name="R02_pupils_classes">
+          <Key>
+            <PropertyRef Name="code_class" />
+          </Key>
+          <Property Name="code_class" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_class" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="study_years" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="B02_study_courses_to_pupils_classes" Relationship="Self.FK_B02_study_courses_to_pupils_classes_0_0" FromRole="R02_pupils_classes" ToRole="B02_study_courses_to_pupils_classes" />
+          <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T01_personalities_0_0" FromRole="R02_pupils_classes" ToRole="T01_personalities" />
+        </EntityType>
+        <EntityType Name="R03_testing_types">
+          <Key>
+            <PropertyRef Name="code_type" />
+          </Key>
+          <Property Name="code_type" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_type" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T04_testing_tasks" Relationship="Self.FK_T04_testing_tasks_0_0" FromRole="R03_testing_types" ToRole="T04_testing_tasks" />
+        </EntityType>
+        <EntityType Name="R04_end_testing_reasons">
+          <Key>
+            <PropertyRef Name="code_end_reason" />
+          </Key>
+          <Property Name="code_end_reason" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_end_reason" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T05_test_passing_results" Relationship="Self.FK_T05_test_passing_results_0_0" FromRole="R04_end_testing_reasons" ToRole="T05_test_passing_results" />
+        </EntityType>
+        <EntityType Name="R05_legal_ownership_forms">
+          <Key>
+            <PropertyRef Name="code_ownership" />
+          </Key>
+          <Property Name="code_ownership" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_ownership" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T10_organizations" Relationship="Self.FK_T10_organizations_0_0" FromRole="R05_legal_ownership_forms" ToRole="T10_organizations" />
+        </EntityType>
+        <EntityType Name="R06_testing_aims">
+          <Key>
+            <PropertyRef Name="code_aim" />
+          </Key>
+          <Property Name="code_aim" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_aim" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="B01_testing_aims_to_tests" Relationship="Self.FK_B01_testing_aims_to_tests_0_0" FromRole="R06_testing_aims" ToRole="B01_testing_aims_to_tests" />
+        </EntityType>
+        <EntityType Name="R07_methodical_materials">
+          <Key>
+            <PropertyRef Name="id_method_material" />
+          </Key>
+          <Property Name="id_method_material" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T02_tests" Relationship="Self.FK_T02_tests_2_0" FromRole="R07_methodical_materials" ToRole="T02_tests" />
+        </EntityType>
+        <EntityType Name="R08_study_courses">
+          <Key>
+            <PropertyRef Name="code_course" />
+          </Key>
+          <Property Name="code_course" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_course" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="B02_study_courses_to_pupils_classes" Relationship="Self.FK_B02_study_courses_to_pupils_classes_1_0" FromRole="R08_study_courses" ToRole="B02_study_courses_to_pupils_classes" />
+          <NavigationProperty Name="B03_study_subjects_to_courses" Relationship="Self.FK_B03_study_subjects_to_courses_1_0" FromRole="R08_study_courses" ToRole="B03_study_subjects_to_courses" />
+        </EntityType>
+        <EntityType Name="R09_study_subjects">
+          <Key>
+            <PropertyRef Name="code_subject" />
+          </Key>
+          <Property Name="code_subject" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_subject" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="academ_hours" Type="Int64" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="B03_study_subjects_to_courses" Relationship="Self.FK_B03_study_subjects_to_courses_0_0" FromRole="R09_study_subjects" ToRole="B03_study_subjects_to_courses" />
+          <NavigationProperty Name="B04_test_tasks_to_study_subjects" Relationship="Self.FK_B04_test_tasks_to_study_subjects_0_0" FromRole="R09_study_subjects" ToRole="B04_test_tasks_to_study_subjects" />
+        </EntityType>
+        <EntityType Name="R10_next_action_variants">
+          <Key>
+            <PropertyRef Name="code_action" />
+          </Key>
+          <Property Name="code_action" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_action" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_6_0" FromRole="R10_next_action_variants" ToRole="T03_testing_task_modules" />
+        </EntityType>
+        <EntityType Name="R11_variants_of_passing_tasks_results_analysis">
+          <Key>
+            <PropertyRef Name="code_variant" />
+          </Key>
+          <Property Name="code_variant" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_variant" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_1_0" FromRole="R11_variants_of_passing_tasks_results_analysis" ToRole="T03_testing_task_modules" />
+        </EntityType>
+        <EntityType Name="R12_instructions_to_test_tasks_types">
+          <Key>
+            <PropertyRef Name="code_instruction" />
+          </Key>
+          <Property Name="code_instruction" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_instruction" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_0_0" FromRole="R12_instructions_to_test_tasks_types" ToRole="T03_testing_task_modules" />
+        </EntityType>
+        <EntityType Name="R13_play_result_variants">
+          <Key>
+            <PropertyRef Name="code_play_result" />
+          </Key>
+          <Property Name="code_play_result" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_play_result" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T09_comment_variants_on_passing_tasks" Relationship="Self.FK_T09_comment_variants_on_passing_tasks_0_0" FromRole="R13_play_result_variants" ToRole="T09_comment_variants_on_passing_tasks" />
+        </EntityType>
+        <EntityType Name="R14_track_types">
+          <Key>
+            <PropertyRef Name="code_type" />
+          </Key>
+          <Property Name="code_type" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_type" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T08_audio_video_tracks" Relationship="Self.FK_T08_audio_video_tracks_0_0" FromRole="R14_track_types" ToRole="T08_audio_video_tracks" />
+        </EntityType>
+        <EntityType Name="R15_task_key_words">
+          <Key>
+            <PropertyRef Name="code_key_word" />
+          </Key>
+          <Property Name="code_key_word" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_key_word" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T11_task_answers" Relationship="Self.FK_T11_task_answers_1_0" FromRole="R15_task_key_words" ToRole="T11_task_answers" />
+        </EntityType>
+        <EntityType Name="T01_personalities">
+          <Key>
+            <PropertyRef Name="id_person" />
+          </Key>
+          <Property Name="id_person" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="surname" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="patronymic" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="date_birth" Type="String" />
+          <Property Name="gender" Type="Int64" />
+          <Property Name="code_category" Type="Int64" />
+          <Property Name="id_org" Type="Int64" />
+          <Property Name="code_class" Type="Int64" />
+          <Property Name="login" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="date_updating" Type="String" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="R01_people_category" Relationship="Self.FK_T01_personalities_1_0" FromRole="T01_personalities" ToRole="R01_people_category" />
+          <NavigationProperty Name="R02_pupils_classes" Relationship="Self.FK_T01_personalities_0_0" FromRole="T01_personalities" ToRole="R02_pupils_classes" />
+          <NavigationProperty Name="T10_organizations" Relationship="Self.FK_T01_personalities_2_0" FromRole="T01_personalities" ToRole="T10_organizations" />
+          <NavigationProperty Name="T02_tests" Relationship="Self.FK_T02_tests_1_0" FromRole="T01_personalities" ToRole="T02_tests" />
+          <NavigationProperty Name="T04_testing_tasks" Relationship="Self.FK_T04_testing_tasks_1_0" FromRole="T01_personalities" ToRole="T04_testing_tasks" />
+          <NavigationProperty Name="T05_test_passing_results" Relationship="Self.FK_T05_test_passing_results_2_0" FromRole="T01_personalities" ToRole="T05_test_passing_results" />
+          <NavigationProperty Name="T07_soundtracks" Relationship="Self.FK_T07_soundtracks_0_0" FromRole="T01_personalities" ToRole="T07_soundtracks" />
+        </EntityType>
+        <EntityType Name="T02_tests">
+          <Key>
+            <PropertyRef Name="id_test" />
+          </Key>
+          <Property Name="id_test" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_test" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="id_method_material" Type="Int64" />
+          <Property Name="id_author" Type="Int64" />
+          <Property Name="date_create" Type="DateTime" />
+          <Property Name="date_correct" Type="DateTime" />
+          <Property Name="max_passing_duration_sec" Type="Int64" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="id_teach_material" Type="Int64" />
+          <NavigationProperty Name="B01_testing_aims_to_tests" Relationship="Self.FK_B01_testing_aims_to_tests_1_0" FromRole="T02_tests" ToRole="B01_testing_aims_to_tests" />
+          <NavigationProperty Name="B05_testing_task_modules_to_tests" Relationship="Self.FK_B05_testing_task_modules_to_tests_1_0" FromRole="T02_tests" ToRole="B05_testing_task_modules_to_tests" />
+          <NavigationProperty Name="R07_methodical_materials" Relationship="Self.FK_T02_tests_2_0" FromRole="T02_tests" ToRole="R07_methodical_materials" />
+          <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T02_tests_1_0" FromRole="T02_tests" ToRole="T01_personalities" />
+          <NavigationProperty Name="T06_teaching_materials" Relationship="Self.FK_T02_tests_0_0" FromRole="T02_tests" ToRole="T06_teaching_materials" />
+          <NavigationProperty Name="T05_test_passing_results" Relationship="Self.FK_T05_test_passing_results_1_0" FromRole="T02_tests" ToRole="T05_test_passing_results" />
+        </EntityType>
+        <EntityType Name="T03_testing_task_modules">
+          <Key>
+            <PropertyRef Name="id_module" />
+          </Key>
+          <Property Name="id_module" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_track" Type="Int64" />
+          <Property Name="id_av_track" Type="Int64" />
+          <Property Name="code_instruction" Type="Int64" />
+          <Property Name="id_task" Type="Int64" />
+          <Property Name="code_variant" Type="Int64" />
+          <Property Name="id_comment" Type="Int64" />
+          <Property Name="comment_view_duration_sec" Type="Int64" />
+          <Property Name="max_passing_duration_sec" Type="Int64" />
+          <Property Name="code_action" Type="Int64" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="B05_testing_task_modules_to_tests" Relationship="Self.FK_B05_testing_task_modules_to_tests_0_0" FromRole="T03_testing_task_modules" ToRole="B05_testing_task_modules_to_tests" />
+          <NavigationProperty Name="R10_next_action_variants" Relationship="Self.FK_T03_testing_task_modules_6_0" FromRole="T03_testing_task_modules" ToRole="R10_next_action_variants" />
+          <NavigationProperty Name="R11_variants_of_passing_tasks_results_analysis" Relationship="Self.FK_T03_testing_task_modules_1_0" FromRole="T03_testing_task_modules" ToRole="R11_variants_of_passing_tasks_results_analysis" />
+          <NavigationProperty Name="R12_instructions_to_test_tasks_types" Relationship="Self.FK_T03_testing_task_modules_0_0" FromRole="T03_testing_task_modules" ToRole="R12_instructions_to_test_tasks_types" />
+          <NavigationProperty Name="T07_soundtracks" Relationship="Self.FK_T03_testing_task_modules_2_0" FromRole="T03_testing_task_modules" ToRole="T07_soundtracks" />
+          <NavigationProperty Name="T04_testing_tasks" Relationship="Self.FK_T03_testing_task_modules_3_0" FromRole="T03_testing_task_modules" ToRole="T04_testing_tasks" />
+          <NavigationProperty Name="T08_audio_video_tracks" Relationship="Self.FK_T03_testing_task_modules_4_0" FromRole="T03_testing_task_modules" ToRole="T08_audio_video_tracks" />
+          <NavigationProperty Name="T09_comment_variants_on_passing_tasks" Relationship="Self.FK_T03_testing_task_modules_5_0" FromRole="T03_testing_task_modules" ToRole="T09_comment_variants_on_passing_tasks" />
+        </EntityType>
+        <EntityType Name="T04_testing_tasks">
+          <Key>
+            <PropertyRef Name="id_task" />
+          </Key>
+          <Property Name="id_task" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_task" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="id_author" Type="Int64" />
+          <Property Name="date_create" Type="DateTime" />
+          <Property Name="date_correct" Type="DateTime" />
+          <Property Name="code_type" Type="Int64" />
+          <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="B04_test_tasks_to_study_subjects" Relationship="Self.FK_B04_test_tasks_to_study_subjects_1_0" FromRole="T04_testing_tasks" ToRole="B04_test_tasks_to_study_subjects" />
+          <NavigationProperty Name="R03_testing_types" Relationship="Self.FK_T04_testing_tasks_0_0" FromRole="T04_testing_tasks" ToRole="R03_testing_types" />
+          <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T04_testing_tasks_1_0" FromRole="T04_testing_tasks" ToRole="T01_personalities" />
+          <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_3_0" FromRole="T04_testing_tasks" ToRole="T03_testing_task_modules" />
+          <NavigationProperty Name="T11_task_answers" Relationship="Self.FK_T11_task_answers_0_0" FromRole="T04_testing_tasks" ToRole="T11_task_answers" />
+        </EntityType>
+        <EntityType Name="T05_test_passing_results">
+          <Key>
+            <PropertyRef Name="id_result" />
+          </Key>
+          <Property Name="id_result" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_person" Type="Int64" />
+          <Property Name="id_test" Type="Int64" />
+          <Property Name="date_testing" Type="DateTime" />
+          <Property Name="time_start" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="time_end" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="code_end_reason" Type="Int64" />
+          <Property Name="amount_passing_tests" Type="Int64" />
+          <Property Name="perc_totally_right" Type="Double" />
+          <Property Name="perc_partially_right" Type="Double" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="R04_end_testing_reasons" Relationship="Self.FK_T05_test_passing_results_0_0" FromRole="T05_test_passing_results" ToRole="R04_end_testing_reasons" />
+          <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T05_test_passing_results_2_0" FromRole="T05_test_passing_results" ToRole="T01_personalities" />
+          <NavigationProperty Name="T02_tests" Relationship="Self.FK_T05_test_passing_results_1_0" FromRole="T05_test_passing_results" ToRole="T02_tests" />
+        </EntityType>
+        <EntityType Name="T06_teaching_materials">
+          <Key>
+            <PropertyRef Name="id_teach_material" />
+          </Key>
+          <Property Name="id_teach_material" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="author" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="source" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T02_tests" Relationship="Self.FK_T02_tests_0_0" FromRole="T06_teaching_materials" ToRole="T02_tests" />
+        </EntityType>
+        <EntityType Name="T07_soundtracks">
+          <Key>
+            <PropertyRef Name="id_track" />
+          </Key>
+          <Property Name="id_track" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_track" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="duration_sec" Type="Int64" />
+          <Property Name="id_announcer" Type="Int64" />
+          <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T07_soundtracks_0_0" FromRole="T07_soundtracks" ToRole="T01_personalities" />
+          <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_2_0" FromRole="T07_soundtracks" ToRole="T03_testing_task_modules" />
+        </EntityType>
+        <EntityType Name="T08_audio_video_tracks">
+          <Key>
+            <PropertyRef Name="id_av_track" />
+          </Key>
+          <Property Name="id_av_track" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_av_track" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="code_type" Type="Int64" />
+          <Property Name="author" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="duration_sec" Type="Int64" />
+          <Property Name="source" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="image_size_pix" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="filesize" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="date_create" Type="DateTime" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="R14_track_types" Relationship="Self.FK_T08_audio_video_tracks_0_0" FromRole="T08_audio_video_tracks" ToRole="R14_track_types" />
+          <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_4_0" FromRole="T08_audio_video_tracks" ToRole="T03_testing_task_modules" />
+        </EntityType>
+        <EntityType Name="T09_comment_variants_on_passing_tasks">
+          <Key>
+            <PropertyRef Name="id_comment" />
+          </Key>
+          <Property Name="id_comment" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code_play_result" Type="Int64" />
+          <Property Name="is_av_track" Type="Int64" />
+          <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="R13_play_result_variants" Relationship="Self.FK_T09_comment_variants_on_passing_tasks_0_0" FromRole="T09_comment_variants_on_passing_tasks" ToRole="R13_play_result_variants" />
+          <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_5_0" FromRole="T09_comment_variants_on_passing_tasks" ToRole="T03_testing_task_modules" />
+        </EntityType>
+        <EntityType Name="T10_organizations">
+          <Key>
+            <PropertyRef Name="id_org" />
+          </Key>
+          <Property Name="id_org" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="full_name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="short_name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="code_ownership" Type="Int64" />
+          <Property Name="address" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="contact_info" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="web_site" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="R05_legal_ownership_forms" Relationship="Self.FK_T10_organizations_0_0" FromRole="T10_organizations" ToRole="R05_legal_ownership_forms" />
+          <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T01_personalities_2_0" FromRole="T10_organizations" ToRole="T01_personalities" />
+        </EntityType>
+        <EntityType Name="T11_task_answers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_task" Type="Int64" />
+          <Property Name="code_key_word" Type="Int64" />
+          <Property Name="string_value" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="image_value" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="sound_value" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="is_correct" Type="Int64" />
+          <Property Name="group_no" Type="Int64" />
+          <NavigationProperty Name="R15_task_key_words" Relationship="Self.FK_T11_task_answers_1_0" FromRole="T11_task_answers" ToRole="R15_task_key_words" />
+          <NavigationProperty Name="T04_testing_tasks" Relationship="Self.FK_T11_task_answers_0_0" FromRole="T11_task_answers" ToRole="T04_testing_tasks" />
+        </EntityType>
+        <Association Name="FK_B01_testing_aims_to_tests_0_0">
+          <End Role="R06_testing_aims" Type="Self.R06_testing_aims" Multiplicity="0..1" />
+          <End Role="B01_testing_aims_to_tests" Type="Self.B01_testing_aims_to_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R06_testing_aims">
+              <PropertyRef Name="code_aim" />
+            </Principal>
+            <Dependent Role="B01_testing_aims_to_tests">
+              <PropertyRef Name="code_aim" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B01_testing_aims_to_tests_1_0">
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="0..1" />
+          <End Role="B01_testing_aims_to_tests" Type="Self.B01_testing_aims_to_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T02_tests">
+              <PropertyRef Name="id_test" />
+            </Principal>
+            <Dependent Role="B01_testing_aims_to_tests">
+              <PropertyRef Name="id_test" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B02_study_courses_to_pupils_classes_0_0">
+          <End Role="R02_pupils_classes" Type="Self.R02_pupils_classes" Multiplicity="0..1" />
+          <End Role="B02_study_courses_to_pupils_classes" Type="Self.B02_study_courses_to_pupils_classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R02_pupils_classes">
+              <PropertyRef Name="code_class" />
+            </Principal>
+            <Dependent Role="B02_study_courses_to_pupils_classes">
+              <PropertyRef Name="code_class" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B02_study_courses_to_pupils_classes_1_0">
+          <End Role="R08_study_courses" Type="Self.R08_study_courses" Multiplicity="0..1" />
+          <End Role="B02_study_courses_to_pupils_classes" Type="Self.B02_study_courses_to_pupils_classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R08_study_courses">
+              <PropertyRef Name="code_course" />
+            </Principal>
+            <Dependent Role="B02_study_courses_to_pupils_classes">
+              <PropertyRef Name="code_course" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B03_study_subjects_to_courses_0_0">
+          <End Role="R09_study_subjects" Type="Self.R09_study_subjects" Multiplicity="0..1" />
+          <End Role="B03_study_subjects_to_courses" Type="Self.B03_study_subjects_to_courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R09_study_subjects">
+              <PropertyRef Name="code_subject" />
+            </Principal>
+            <Dependent Role="B03_study_subjects_to_courses">
+              <PropertyRef Name="code_subject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B03_study_subjects_to_courses_1_0">
+          <End Role="R08_study_courses" Type="Self.R08_study_courses" Multiplicity="0..1" />
+          <End Role="B03_study_subjects_to_courses" Type="Self.B03_study_subjects_to_courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R08_study_courses">
+              <PropertyRef Name="code_course" />
+            </Principal>
+            <Dependent Role="B03_study_subjects_to_courses">
+              <PropertyRef Name="code_course" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B04_test_tasks_to_study_subjects_0_0">
+          <End Role="R09_study_subjects" Type="Self.R09_study_subjects" Multiplicity="0..1" />
+          <End Role="B04_test_tasks_to_study_subjects" Type="Self.B04_test_tasks_to_study_subjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R09_study_subjects">
+              <PropertyRef Name="code_subject" />
+            </Principal>
+            <Dependent Role="B04_test_tasks_to_study_subjects">
+              <PropertyRef Name="code_subject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B04_test_tasks_to_study_subjects_1_0">
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="0..1" />
+          <End Role="B04_test_tasks_to_study_subjects" Type="Self.B04_test_tasks_to_study_subjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T04_testing_tasks">
+              <PropertyRef Name="id_task" />
+            </Principal>
+            <Dependent Role="B04_test_tasks_to_study_subjects">
+              <PropertyRef Name="id_task" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B05_testing_task_modules_to_tests_0_0">
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="0..1" />
+          <End Role="B05_testing_task_modules_to_tests" Type="Self.B05_testing_task_modules_to_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T03_testing_task_modules">
+              <PropertyRef Name="id_module" />
+            </Principal>
+            <Dependent Role="B05_testing_task_modules_to_tests">
+              <PropertyRef Name="id_module" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_B05_testing_task_modules_to_tests_1_0">
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="0..1" />
+          <End Role="B05_testing_task_modules_to_tests" Type="Self.B05_testing_task_modules_to_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T02_tests">
+              <PropertyRef Name="id_test" />
+            </Principal>
+            <Dependent Role="B05_testing_task_modules_to_tests">
+              <PropertyRef Name="id_test" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T01_personalities_1_0">
+          <End Role="R01_people_category" Type="Self.R01_people_category" Multiplicity="0..1" />
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R01_people_category">
+              <PropertyRef Name="code_category" />
+            </Principal>
+            <Dependent Role="T01_personalities">
+              <PropertyRef Name="code_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T01_personalities_0_0">
+          <End Role="R02_pupils_classes" Type="Self.R02_pupils_classes" Multiplicity="0..1" />
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R02_pupils_classes">
+              <PropertyRef Name="code_class" />
+            </Principal>
+            <Dependent Role="T01_personalities">
+              <PropertyRef Name="code_class" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T04_testing_tasks_0_0">
+          <End Role="R03_testing_types" Type="Self.R03_testing_types" Multiplicity="0..1" />
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R03_testing_types">
+              <PropertyRef Name="code_type" />
+            </Principal>
+            <Dependent Role="T04_testing_tasks">
+              <PropertyRef Name="code_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T05_test_passing_results_0_0">
+          <End Role="R04_end_testing_reasons" Type="Self.R04_end_testing_reasons" Multiplicity="0..1" />
+          <End Role="T05_test_passing_results" Type="Self.T05_test_passing_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R04_end_testing_reasons">
+              <PropertyRef Name="code_end_reason" />
+            </Principal>
+            <Dependent Role="T05_test_passing_results">
+              <PropertyRef Name="code_end_reason" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T10_organizations_0_0">
+          <End Role="R05_legal_ownership_forms" Type="Self.R05_legal_ownership_forms" Multiplicity="0..1" />
+          <End Role="T10_organizations" Type="Self.T10_organizations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R05_legal_ownership_forms">
+              <PropertyRef Name="code_ownership" />
+            </Principal>
+            <Dependent Role="T10_organizations">
+              <PropertyRef Name="code_ownership" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T02_tests_2_0">
+          <End Role="R07_methodical_materials" Type="Self.R07_methodical_materials" Multiplicity="0..1" />
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R07_methodical_materials">
+              <PropertyRef Name="id_method_material" />
+            </Principal>
+            <Dependent Role="T02_tests">
+              <PropertyRef Name="id_method_material" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_6_0">
+          <End Role="R10_next_action_variants" Type="Self.R10_next_action_variants" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R10_next_action_variants">
+              <PropertyRef Name="code_action" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="code_action" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_1_0">
+          <End Role="R11_variants_of_passing_tasks_results_analysis" Type="Self.R11_variants_of_passing_tasks_results_analysis" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R11_variants_of_passing_tasks_results_analysis">
+              <PropertyRef Name="code_variant" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="code_variant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_0_0">
+          <End Role="R12_instructions_to_test_tasks_types" Type="Self.R12_instructions_to_test_tasks_types" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R12_instructions_to_test_tasks_types">
+              <PropertyRef Name="code_instruction" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="code_instruction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T09_comment_variants_on_passing_tasks_0_0">
+          <End Role="R13_play_result_variants" Type="Self.R13_play_result_variants" Multiplicity="0..1" />
+          <End Role="T09_comment_variants_on_passing_tasks" Type="Self.T09_comment_variants_on_passing_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R13_play_result_variants">
+              <PropertyRef Name="code_play_result" />
+            </Principal>
+            <Dependent Role="T09_comment_variants_on_passing_tasks">
+              <PropertyRef Name="code_play_result" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T08_audio_video_tracks_0_0">
+          <End Role="R14_track_types" Type="Self.R14_track_types" Multiplicity="0..1" />
+          <End Role="T08_audio_video_tracks" Type="Self.T08_audio_video_tracks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R14_track_types">
+              <PropertyRef Name="code_type" />
+            </Principal>
+            <Dependent Role="T08_audio_video_tracks">
+              <PropertyRef Name="code_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T11_task_answers_1_0">
+          <End Role="R15_task_key_words" Type="Self.R15_task_key_words" Multiplicity="0..1" />
+          <End Role="T11_task_answers" Type="Self.T11_task_answers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R15_task_key_words">
+              <PropertyRef Name="code_key_word" />
+            </Principal>
+            <Dependent Role="T11_task_answers">
+              <PropertyRef Name="code_key_word" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T01_personalities_2_0">
+          <End Role="T10_organizations" Type="Self.T10_organizations" Multiplicity="0..1" />
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T10_organizations">
+              <PropertyRef Name="id_org" />
+            </Principal>
+            <Dependent Role="T01_personalities">
+              <PropertyRef Name="id_org" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T02_tests_1_0">
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T01_personalities">
+              <PropertyRef Name="id_person" />
+            </Principal>
+            <Dependent Role="T02_tests">
+              <PropertyRef Name="id_author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T04_testing_tasks_1_0">
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T01_personalities">
+              <PropertyRef Name="id_person" />
+            </Principal>
+            <Dependent Role="T04_testing_tasks">
+              <PropertyRef Name="id_author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T05_test_passing_results_2_0">
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
+          <End Role="T05_test_passing_results" Type="Self.T05_test_passing_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T01_personalities">
+              <PropertyRef Name="id_person" />
+            </Principal>
+            <Dependent Role="T05_test_passing_results">
+              <PropertyRef Name="id_person" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T07_soundtracks_0_0">
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
+          <End Role="T07_soundtracks" Type="Self.T07_soundtracks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T01_personalities">
+              <PropertyRef Name="id_person" />
+            </Principal>
+            <Dependent Role="T07_soundtracks">
+              <PropertyRef Name="id_announcer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T02_tests_0_0">
+          <End Role="T06_teaching_materials" Type="Self.T06_teaching_materials" Multiplicity="0..1" />
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T06_teaching_materials">
+              <PropertyRef Name="id_teach_material" />
+            </Principal>
+            <Dependent Role="T02_tests">
+              <PropertyRef Name="id_teach_material" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T05_test_passing_results_1_0">
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="0..1" />
+          <End Role="T05_test_passing_results" Type="Self.T05_test_passing_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T02_tests">
+              <PropertyRef Name="id_test" />
+            </Principal>
+            <Dependent Role="T05_test_passing_results">
+              <PropertyRef Name="id_test" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_2_0">
+          <End Role="T07_soundtracks" Type="Self.T07_soundtracks" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T07_soundtracks">
+              <PropertyRef Name="id_track" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="id_track" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_3_0">
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T04_testing_tasks">
+              <PropertyRef Name="id_task" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="id_task" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_4_0">
+          <End Role="T08_audio_video_tracks" Type="Self.T08_audio_video_tracks" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T08_audio_video_tracks">
+              <PropertyRef Name="id_av_track" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="id_av_track" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_5_0">
+          <End Role="T09_comment_variants_on_passing_tasks" Type="Self.T09_comment_variants_on_passing_tasks" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T09_comment_variants_on_passing_tasks">
+              <PropertyRef Name="id_comment" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="id_comment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T11_task_answers_0_0">
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="0..1" />
+          <End Role="T11_task_answers" Type="Self.T11_task_answers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T04_testing_tasks">
+              <PropertyRef Name="id_task" />
+            </Principal>
+            <Dependent Role="T11_task_answers">
+              <PropertyRef Name="id_task" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="bd_kidsEntitiesConn" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="B01_testing_aims_to_tests" EntityType="Self.B01_testing_aims_to_tests" />
+          <EntitySet Name="B02_study_courses_to_pupils_classes" EntityType="Self.B02_study_courses_to_pupils_classes" />
+          <EntitySet Name="B03_study_subjects_to_courses" EntityType="Self.B03_study_subjects_to_courses" />
+          <EntitySet Name="B04_test_tasks_to_study_subjects" EntityType="Self.B04_test_tasks_to_study_subjects" />
+          <EntitySet Name="B05_testing_task_modules_to_tests" EntityType="Self.B05_testing_task_modules_to_tests" />
+          <EntitySet Name="R01_people_category" EntityType="Self.R01_people_category" />
+          <EntitySet Name="R02_pupils_classes" EntityType="Self.R02_pupils_classes" />
+          <EntitySet Name="R03_testing_types" EntityType="Self.R03_testing_types" />
+          <EntitySet Name="R04_end_testing_reasons" EntityType="Self.R04_end_testing_reasons" />
+          <EntitySet Name="R05_legal_ownership_forms" EntityType="Self.R05_legal_ownership_forms" />
+          <EntitySet Name="R06_testing_aims" EntityType="Self.R06_testing_aims" />
+          <EntitySet Name="R07_methodical_materials" EntityType="Self.R07_methodical_materials" />
+          <EntitySet Name="R08_study_courses" EntityType="Self.R08_study_courses" />
+          <EntitySet Name="R09_study_subjects" EntityType="Self.R09_study_subjects" />
+          <EntitySet Name="R10_next_action_variants" EntityType="Self.R10_next_action_variants" />
+          <EntitySet Name="R11_variants_of_passing_tasks_results_analysis" EntityType="Self.R11_variants_of_passing_tasks_results_analysis" />
+          <EntitySet Name="R12_instructions_to_test_tasks_types" EntityType="Self.R12_instructions_to_test_tasks_types" />
+          <EntitySet Name="R13_play_result_variants" EntityType="Self.R13_play_result_variants" />
+          <EntitySet Name="R14_track_types" EntityType="Self.R14_track_types" />
+          <EntitySet Name="R15_task_key_words" EntityType="Self.R15_task_key_words" />
+          <EntitySet Name="T01_personalities" EntityType="Self.T01_personalities" />
+          <EntitySet Name="T02_tests" EntityType="Self.T02_tests" />
+          <EntitySet Name="T03_testing_task_modules" EntityType="Self.T03_testing_task_modules" />
+          <EntitySet Name="T04_testing_tasks" EntityType="Self.T04_testing_tasks" />
+          <EntitySet Name="T05_test_passing_results" EntityType="Self.T05_test_passing_results" />
+          <EntitySet Name="T06_teaching_materials" EntityType="Self.T06_teaching_materials" />
+          <EntitySet Name="T07_soundtracks" EntityType="Self.T07_soundtracks" />
+          <EntitySet Name="T08_audio_video_tracks" EntityType="Self.T08_audio_video_tracks" />
+          <EntitySet Name="T09_comment_variants_on_passing_tasks" EntityType="Self.T09_comment_variants_on_passing_tasks" />
+          <EntitySet Name="T10_organizations" EntityType="Self.T10_organizations" />
+          <EntitySet Name="T11_task_answers" EntityType="Self.T11_task_answers" />
+          <AssociationSet Name="FK_B01_testing_aims_to_tests_0_0" Association="Self.FK_B01_testing_aims_to_tests_0_0">
+            <End Role="R06_testing_aims" EntitySet="R06_testing_aims" />
+            <End Role="B01_testing_aims_to_tests" EntitySet="B01_testing_aims_to_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B01_testing_aims_to_tests_1_0" Association="Self.FK_B01_testing_aims_to_tests_1_0">
+            <End Role="T02_tests" EntitySet="T02_tests" />
+            <End Role="B01_testing_aims_to_tests" EntitySet="B01_testing_aims_to_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B02_study_courses_to_pupils_classes_0_0" Association="Self.FK_B02_study_courses_to_pupils_classes_0_0">
+            <End Role="R02_pupils_classes" EntitySet="R02_pupils_classes" />
+            <End Role="B02_study_courses_to_pupils_classes" EntitySet="B02_study_courses_to_pupils_classes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B02_study_courses_to_pupils_classes_1_0" Association="Self.FK_B02_study_courses_to_pupils_classes_1_0">
+            <End Role="R08_study_courses" EntitySet="R08_study_courses" />
+            <End Role="B02_study_courses_to_pupils_classes" EntitySet="B02_study_courses_to_pupils_classes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B03_study_subjects_to_courses_0_0" Association="Self.FK_B03_study_subjects_to_courses_0_0">
+            <End Role="R09_study_subjects" EntitySet="R09_study_subjects" />
+            <End Role="B03_study_subjects_to_courses" EntitySet="B03_study_subjects_to_courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B03_study_subjects_to_courses_1_0" Association="Self.FK_B03_study_subjects_to_courses_1_0">
+            <End Role="R08_study_courses" EntitySet="R08_study_courses" />
+            <End Role="B03_study_subjects_to_courses" EntitySet="B03_study_subjects_to_courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B04_test_tasks_to_study_subjects_0_0" Association="Self.FK_B04_test_tasks_to_study_subjects_0_0">
+            <End Role="R09_study_subjects" EntitySet="R09_study_subjects" />
+            <End Role="B04_test_tasks_to_study_subjects" EntitySet="B04_test_tasks_to_study_subjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B04_test_tasks_to_study_subjects_1_0" Association="Self.FK_B04_test_tasks_to_study_subjects_1_0">
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+            <End Role="B04_test_tasks_to_study_subjects" EntitySet="B04_test_tasks_to_study_subjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B05_testing_task_modules_to_tests_0_0" Association="Self.FK_B05_testing_task_modules_to_tests_0_0">
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+            <End Role="B05_testing_task_modules_to_tests" EntitySet="B05_testing_task_modules_to_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_B05_testing_task_modules_to_tests_1_0" Association="Self.FK_B05_testing_task_modules_to_tests_1_0">
+            <End Role="T02_tests" EntitySet="T02_tests" />
+            <End Role="B05_testing_task_modules_to_tests" EntitySet="B05_testing_task_modules_to_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T01_personalities_1_0" Association="Self.FK_T01_personalities_1_0">
+            <End Role="R01_people_category" EntitySet="R01_people_category" />
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T01_personalities_0_0" Association="Self.FK_T01_personalities_0_0">
+            <End Role="R02_pupils_classes" EntitySet="R02_pupils_classes" />
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T04_testing_tasks_0_0" Association="Self.FK_T04_testing_tasks_0_0">
+            <End Role="R03_testing_types" EntitySet="R03_testing_types" />
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T05_test_passing_results_0_0" Association="Self.FK_T05_test_passing_results_0_0">
+            <End Role="R04_end_testing_reasons" EntitySet="R04_end_testing_reasons" />
+            <End Role="T05_test_passing_results" EntitySet="T05_test_passing_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T10_organizations_0_0" Association="Self.FK_T10_organizations_0_0">
+            <End Role="R05_legal_ownership_forms" EntitySet="R05_legal_ownership_forms" />
+            <End Role="T10_organizations" EntitySet="T10_organizations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T02_tests_2_0" Association="Self.FK_T02_tests_2_0">
+            <End Role="R07_methodical_materials" EntitySet="R07_methodical_materials" />
+            <End Role="T02_tests" EntitySet="T02_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_6_0" Association="Self.FK_T03_testing_task_modules_6_0">
+            <End Role="R10_next_action_variants" EntitySet="R10_next_action_variants" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_1_0" Association="Self.FK_T03_testing_task_modules_1_0">
+            <End Role="R11_variants_of_passing_tasks_results_analysis" EntitySet="R11_variants_of_passing_tasks_results_analysis" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_0_0" Association="Self.FK_T03_testing_task_modules_0_0">
+            <End Role="R12_instructions_to_test_tasks_types" EntitySet="R12_instructions_to_test_tasks_types" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T09_comment_variants_on_passing_tasks_0_0" Association="Self.FK_T09_comment_variants_on_passing_tasks_0_0">
+            <End Role="R13_play_result_variants" EntitySet="R13_play_result_variants" />
+            <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T08_audio_video_tracks_0_0" Association="Self.FK_T08_audio_video_tracks_0_0">
+            <End Role="R14_track_types" EntitySet="R14_track_types" />
+            <End Role="T08_audio_video_tracks" EntitySet="T08_audio_video_tracks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T11_task_answers_1_0" Association="Self.FK_T11_task_answers_1_0">
+            <End Role="R15_task_key_words" EntitySet="R15_task_key_words" />
+            <End Role="T11_task_answers" EntitySet="T11_task_answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T01_personalities_2_0" Association="Self.FK_T01_personalities_2_0">
+            <End Role="T10_organizations" EntitySet="T10_organizations" />
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T02_tests_1_0" Association="Self.FK_T02_tests_1_0">
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="T02_tests" EntitySet="T02_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T04_testing_tasks_1_0" Association="Self.FK_T04_testing_tasks_1_0">
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T05_test_passing_results_2_0" Association="Self.FK_T05_test_passing_results_2_0">
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="T05_test_passing_results" EntitySet="T05_test_passing_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T07_soundtracks_0_0" Association="Self.FK_T07_soundtracks_0_0">
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="T07_soundtracks" EntitySet="T07_soundtracks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T02_tests_0_0" Association="Self.FK_T02_tests_0_0">
+            <End Role="T06_teaching_materials" EntitySet="T06_teaching_materials" />
+            <End Role="T02_tests" EntitySet="T02_tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T05_test_passing_results_1_0" Association="Self.FK_T05_test_passing_results_1_0">
+            <End Role="T02_tests" EntitySet="T02_tests" />
+            <End Role="T05_test_passing_results" EntitySet="T05_test_passing_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_2_0" Association="Self.FK_T03_testing_task_modules_2_0">
+            <End Role="T07_soundtracks" EntitySet="T07_soundtracks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_3_0" Association="Self.FK_T03_testing_task_modules_3_0">
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_4_0" Association="Self.FK_T03_testing_task_modules_4_0">
+            <End Role="T08_audio_video_tracks" EntitySet="T08_audio_video_tracks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_5_0" Association="Self.FK_T03_testing_task_modules_5_0">
+            <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T11_task_answers_0_0" Association="Self.FK_T11_task_answers_0_0">
+            <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+            <End Role="T11_task_answers" EntitySet="T11_task_answers" />
+          </AssociationSet>
+          <EntitySet Name="R00_decode" EntityType="bd_kidsModel.R00_decode" />
+          <EntitySet Name="T01_1_pupils" EntityType="bd_kidsModel.T01_1_pupils" />
+          <EntitySet Name="T01_2_others" EntityType="bd_kidsModel.T01_2_others" />
+        </EntityContainer>
+        <EntityType Name="R00_decode">
+          <Key>
+            <PropertyRef Name="code_decode" />
+          </Key>
+          <Property Name="code_decode" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_decode" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="full_name_decode" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T01_1_pupils">
+          <Key>
+            <PropertyRef Name="id_person" />
+          </Key>
+          <Property Name="id_person" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="surname" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="patronymic" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="date_birth" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_decode" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_category" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_class" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="short_name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="login" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="date_updating" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T01_2_others">
+          <Key>
+            <PropertyRef Name="id_person" />
+          </Key>
+          <Property Name="id_person" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="surname" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="patronymic" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="date_birth" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_decode" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_category" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="short_name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="login" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="date_updating" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище bd_kidsModelContainer" CdmEntityContainer="bd_kidsEntitiesConn">
+          <EntitySetMapping Name="B01_testing_aims_to_tests">
+            <EntityTypeMapping TypeName="bd_kidsModel.B01_testing_aims_to_tests">
+              <MappingFragment StoreEntitySet="B01_testing_aims_to_tests">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="code_aim" ColumnName="code_aim" />
+                <ScalarProperty Name="is_main_aim" ColumnName="is_main_aim" />
+                <ScalarProperty Name="id_test" ColumnName="id_test" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="B02_study_courses_to_pupils_classes">
+            <EntityTypeMapping TypeName="bd_kidsModel.B02_study_courses_to_pupils_classes">
+              <MappingFragment StoreEntitySet="B02_study_courses_to_pupils_classes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="code_course" ColumnName="code_course" />
+                <ScalarProperty Name="code_class" ColumnName="code_class" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="B03_study_subjects_to_courses">
+            <EntityTypeMapping TypeName="bd_kidsModel.B03_study_subjects_to_courses">
+              <MappingFragment StoreEntitySet="B03_study_subjects_to_courses">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="code_course" ColumnName="code_course" />
+                <ScalarProperty Name="code_subject" ColumnName="code_subject" />
+                <ScalarProperty Name="serial_number_subject" ColumnName="serial_number_subject" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="B04_test_tasks_to_study_subjects">
+            <EntityTypeMapping TypeName="bd_kidsModel.B04_test_tasks_to_study_subjects">
+              <MappingFragment StoreEntitySet="B04_test_tasks_to_study_subjects">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_task" ColumnName="id_task" />
+                <ScalarProperty Name="code_subject" ColumnName="code_subject" />
+                <ScalarProperty Name="equvivalent_perc" ColumnName="equvivalent_perc" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="B05_testing_task_modules_to_tests">
+            <EntityTypeMapping TypeName="bd_kidsModel.B05_testing_task_modules_to_tests">
+              <MappingFragment StoreEntitySet="B05_testing_task_modules_to_tests">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_test" ColumnName="id_test" />
+                <ScalarProperty Name="id_module" ColumnName="id_module" />
+                <ScalarProperty Name="serial_number_module" ColumnName="serial_number_module" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R01_people_category">
+            <EntityTypeMapping TypeName="bd_kidsModel.R01_people_category">
+              <MappingFragment StoreEntitySet="R01_people_category">
+                <ScalarProperty Name="code_category" ColumnName="code_category" />
+                <ScalarProperty Name="name_category" ColumnName="name_category" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R02_pupils_classes">
+            <EntityTypeMapping TypeName="bd_kidsModel.R02_pupils_classes">
+              <MappingFragment StoreEntitySet="R02_pupils_classes">
+                <ScalarProperty Name="code_class" ColumnName="code_class" />
+                <ScalarProperty Name="name_class" ColumnName="name_class" />
+                <ScalarProperty Name="study_years" ColumnName="study_years" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R03_testing_types">
+            <EntityTypeMapping TypeName="bd_kidsModel.R03_testing_types">
+              <MappingFragment StoreEntitySet="R03_testing_types">
+                <ScalarProperty Name="code_type" ColumnName="code_type" />
+                <ScalarProperty Name="name_type" ColumnName="name_type" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R04_end_testing_reasons">
+            <EntityTypeMapping TypeName="bd_kidsModel.R04_end_testing_reasons">
+              <MappingFragment StoreEntitySet="R04_end_testing_reasons">
+                <ScalarProperty Name="code_end_reason" ColumnName="code_end_reason" />
+                <ScalarProperty Name="name_end_reason" ColumnName="name_end_reason" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R05_legal_ownership_forms">
+            <EntityTypeMapping TypeName="bd_kidsModel.R05_legal_ownership_forms">
+              <MappingFragment StoreEntitySet="R05_legal_ownership_forms">
+                <ScalarProperty Name="code_ownership" ColumnName="code_ownership" />
+                <ScalarProperty Name="name_ownership" ColumnName="name_ownership" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R06_testing_aims">
+            <EntityTypeMapping TypeName="bd_kidsModel.R06_testing_aims">
+              <MappingFragment StoreEntitySet="R06_testing_aims">
+                <ScalarProperty Name="code_aim" ColumnName="code_aim" />
+                <ScalarProperty Name="name_aim" ColumnName="name_aim" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R07_methodical_materials">
+            <EntityTypeMapping TypeName="bd_kidsModel.R07_methodical_materials">
+              <MappingFragment StoreEntitySet="R07_methodical_materials">
+                <ScalarProperty Name="id_method_material" ColumnName="id_method_material" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="file_location" ColumnName="file_location" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R08_study_courses">
+            <EntityTypeMapping TypeName="bd_kidsModel.R08_study_courses">
+              <MappingFragment StoreEntitySet="R08_study_courses">
+                <ScalarProperty Name="code_course" ColumnName="code_course" />
+                <ScalarProperty Name="name_course" ColumnName="name_course" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R09_study_subjects">
+            <EntityTypeMapping TypeName="bd_kidsModel.R09_study_subjects">
+              <MappingFragment StoreEntitySet="R09_study_subjects">
+                <ScalarProperty Name="code_subject" ColumnName="code_subject" />
+                <ScalarProperty Name="name_subject" ColumnName="name_subject" />
+                <ScalarProperty Name="academ_hours" ColumnName="academ_hours" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R10_next_action_variants">
+            <EntityTypeMapping TypeName="bd_kidsModel.R10_next_action_variants">
+              <MappingFragment StoreEntitySet="R10_next_action_variants">
+                <ScalarProperty Name="code_action" ColumnName="code_action" />
+                <ScalarProperty Name="name_action" ColumnName="name_action" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R11_variants_of_passing_tasks_results_analysis">
+            <EntityTypeMapping TypeName="bd_kidsModel.R11_variants_of_passing_tasks_results_analysis">
+              <MappingFragment StoreEntitySet="R11_variants_of_passing_tasks_results_analysis">
+                <ScalarProperty Name="code_variant" ColumnName="code_variant" />
+                <ScalarProperty Name="name_variant" ColumnName="name_variant" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R12_instructions_to_test_tasks_types">
+            <EntityTypeMapping TypeName="bd_kidsModel.R12_instructions_to_test_tasks_types">
+              <MappingFragment StoreEntitySet="R12_instructions_to_test_tasks_types">
+                <ScalarProperty Name="code_instruction" ColumnName="code_instruction" />
+                <ScalarProperty Name="name_instruction" ColumnName="name_instruction" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R13_play_result_variants">
+            <EntityTypeMapping TypeName="bd_kidsModel.R13_play_result_variants">
+              <MappingFragment StoreEntitySet="R13_play_result_variants">
+                <ScalarProperty Name="code_play_result" ColumnName="code_play_result" />
+                <ScalarProperty Name="name_play_result" ColumnName="name_play_result" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R14_track_types">
+            <EntityTypeMapping TypeName="bd_kidsModel.R14_track_types">
+              <MappingFragment StoreEntitySet="R14_track_types">
+                <ScalarProperty Name="code_type" ColumnName="code_type" />
+                <ScalarProperty Name="name_type" ColumnName="name_type" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R15_task_key_words">
+            <EntityTypeMapping TypeName="bd_kidsModel.R15_task_key_words">
+              <MappingFragment StoreEntitySet="R15_task_key_words">
+                <ScalarProperty Name="code_key_word" ColumnName="code_key_word" />
+                <ScalarProperty Name="name_key_word" ColumnName="name_key_word" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T01_personalities">
+            <EntityTypeMapping TypeName="bd_kidsModel.T01_personalities">
+              <MappingFragment StoreEntitySet="T01_personalities">
+                <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+                <ScalarProperty Name="id_person" ColumnName="id_person" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="code_category" ColumnName="code_category" />
+                <ScalarProperty Name="id_org" ColumnName="id_org" />
+                <ScalarProperty Name="code_class" ColumnName="code_class" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="date_updating" ColumnName="date_updating" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T02_tests">
+            <EntityTypeMapping TypeName="bd_kidsModel.T02_tests">
+              <MappingFragment StoreEntitySet="T02_tests">
+                <ScalarProperty Name="id_test" ColumnName="id_test" />
+                <ScalarProperty Name="name_test" ColumnName="name_test" />
+                <ScalarProperty Name="id_method_material" ColumnName="id_method_material" />
+                <ScalarProperty Name="id_author" ColumnName="id_author" />
+                <ScalarProperty Name="date_create" ColumnName="date_create" />
+                <ScalarProperty Name="date_correct" ColumnName="date_correct" />
+                <ScalarProperty Name="max_passing_duration_sec" ColumnName="max_passing_duration_sec" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="id_teach_material" ColumnName="id_teach_material" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T03_testing_task_modules">
+            <EntityTypeMapping TypeName="bd_kidsModel.T03_testing_task_modules">
+              <MappingFragment StoreEntitySet="T03_testing_task_modules">
+                <ScalarProperty Name="id_module" ColumnName="id_module" />
+                <ScalarProperty Name="id_track" ColumnName="id_track" />
+                <ScalarProperty Name="id_av_track" ColumnName="id_av_track" />
+                <ScalarProperty Name="code_instruction" ColumnName="code_instruction" />
+                <ScalarProperty Name="id_task" ColumnName="id_task" />
+                <ScalarProperty Name="code_variant" ColumnName="code_variant" />
+                <ScalarProperty Name="id_comment" ColumnName="id_comment" />
+                <ScalarProperty Name="comment_view_duration_sec" ColumnName="comment_view_duration_sec" />
+                <ScalarProperty Name="max_passing_duration_sec" ColumnName="max_passing_duration_sec" />
+                <ScalarProperty Name="code_action" ColumnName="code_action" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T04_testing_tasks">
+            <EntityTypeMapping TypeName="bd_kidsModel.T04_testing_tasks">
+              <MappingFragment StoreEntitySet="T04_testing_tasks">
+                <ScalarProperty Name="id_task" ColumnName="id_task" />
+                <ScalarProperty Name="name_task" ColumnName="name_task" />
+                <ScalarProperty Name="id_author" ColumnName="id_author" />
+                <ScalarProperty Name="date_create" ColumnName="date_create" />
+                <ScalarProperty Name="date_correct" ColumnName="date_correct" />
+                <ScalarProperty Name="code_type" ColumnName="code_type" />
+                <ScalarProperty Name="file_location" ColumnName="file_location" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T05_test_passing_results">
+            <EntityTypeMapping TypeName="bd_kidsModel.T05_test_passing_results">
+              <MappingFragment StoreEntitySet="T05_test_passing_results">
+                <ScalarProperty Name="id_result" ColumnName="id_result" />
+                <ScalarProperty Name="id_person" ColumnName="id_person" />
+                <ScalarProperty Name="id_test" ColumnName="id_test" />
+                <ScalarProperty Name="date_testing" ColumnName="date_testing" />
+                <ScalarProperty Name="time_start" ColumnName="time_start" />
+                <ScalarProperty Name="time_end" ColumnName="time_end" />
+                <ScalarProperty Name="code_end_reason" ColumnName="code_end_reason" />
+                <ScalarProperty Name="amount_passing_tests" ColumnName="amount_passing_tests" />
+                <ScalarProperty Name="perc_totally_right" ColumnName="perc_totally_right" />
+                <ScalarProperty Name="perc_partially_right" ColumnName="perc_partially_right" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T06_teaching_materials">
+            <EntityTypeMapping TypeName="bd_kidsModel.T06_teaching_materials">
+              <MappingFragment StoreEntitySet="T06_teaching_materials">
+                <ScalarProperty Name="id_teach_material" ColumnName="id_teach_material" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="file_location" ColumnName="file_location" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="source" ColumnName="source" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T07_soundtracks">
+            <EntityTypeMapping TypeName="bd_kidsModel.T07_soundtracks">
+              <MappingFragment StoreEntitySet="T07_soundtracks">
+                <ScalarProperty Name="id_track" ColumnName="id_track" />
+                <ScalarProperty Name="name_track" ColumnName="name_track" />
+                <ScalarProperty Name="duration_sec" ColumnName="duration_sec" />
+                <ScalarProperty Name="id_announcer" ColumnName="id_announcer" />
+                <ScalarProperty Name="file_location" ColumnName="file_location" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T08_audio_video_tracks">
+            <EntityTypeMapping TypeName="bd_kidsModel.T08_audio_video_tracks">
+              <MappingFragment StoreEntitySet="T08_audio_video_tracks">
+                <ScalarProperty Name="id_av_track" ColumnName="id_av_track" />
+                <ScalarProperty Name="name_av_track" ColumnName="name_av_track" />
+                <ScalarProperty Name="code_type" ColumnName="code_type" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="duration_sec" ColumnName="duration_sec" />
+                <ScalarProperty Name="source" ColumnName="source" />
+                <ScalarProperty Name="image_size_pix" ColumnName="image_size_pix" />
+                <ScalarProperty Name="filesize" ColumnName="filesize" />
+                <ScalarProperty Name="date_create" ColumnName="date_create" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T09_comment_variants_on_passing_tasks">
+            <EntityTypeMapping TypeName="bd_kidsModel.T09_comment_variants_on_passing_tasks">
+              <MappingFragment StoreEntitySet="T09_comment_variants_on_passing_tasks">
+                <ScalarProperty Name="id_comment" ColumnName="id_comment" />
+                <ScalarProperty Name="code_play_result" ColumnName="code_play_result" />
+                <ScalarProperty Name="is_av_track" ColumnName="is_av_track" />
+                <ScalarProperty Name="file_location" ColumnName="file_location" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T10_organizations">
+            <EntityTypeMapping TypeName="bd_kidsModel.T10_organizations">
+              <MappingFragment StoreEntitySet="T10_organizations">
+                <ScalarProperty Name="id_org" ColumnName="id_org" />
+                <ScalarProperty Name="full_name" ColumnName="full_name" />
+                <ScalarProperty Name="short_name" ColumnName="short_name" />
+                <ScalarProperty Name="code_ownership" ColumnName="code_ownership" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="contact_info" ColumnName="contact_info" />
+                <ScalarProperty Name="web_site" ColumnName="web_site" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T11_task_answers">
+            <EntityTypeMapping TypeName="bd_kidsModel.T11_task_answers">
+              <MappingFragment StoreEntitySet="T11_task_answers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_task" ColumnName="id_task" />
+                <ScalarProperty Name="code_key_word" ColumnName="code_key_word" />
+                <ScalarProperty Name="string_value" ColumnName="string_value" />
+                <ScalarProperty Name="image_value" ColumnName="image_value" />
+                <ScalarProperty Name="sound_value" ColumnName="sound_value" />
+                <ScalarProperty Name="is_correct" ColumnName="is_correct" />
+                <ScalarProperty Name="group_no" ColumnName="group_no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="R00_decode">
+            <EntityTypeMapping TypeName="bd_kidsModel.R00_decode">
+              <MappingFragment StoreEntitySet="R00_decode">
+                <ScalarProperty Name="full_name_decode" ColumnName="full_name_decode" />
+                <ScalarProperty Name="name_decode" ColumnName="name_decode" />
+                <ScalarProperty Name="code_decode" ColumnName="code_decode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T01_1_pupils">
+            <EntityTypeMapping TypeName="bd_kidsModel.T01_1_pupils">
+              <MappingFragment StoreEntitySet="T01_1_pupils">
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="date_updating" ColumnName="date_updating" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="short_name" ColumnName="short_name" />
+                <ScalarProperty Name="name_class" ColumnName="name_class" />
+                <ScalarProperty Name="name_category" ColumnName="name_category" />
+                <ScalarProperty Name="name_decode" ColumnName="name_decode" />
+                <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+                <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="id_person" ColumnName="id_person" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T01_2_others">
+            <EntityTypeMapping TypeName="bd_kidsModel.T01_2_others">
+              <MappingFragment StoreEntitySet="T01_2_others">
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="date_updating" ColumnName="date_updating" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="short_name" ColumnName="short_name" />
+                <ScalarProperty Name="name_category" ColumnName="name_category" />
+                <ScalarProperty Name="name_decode" ColumnName="name_decode" />
+                <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+                <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="id_person" ColumnName="id_person" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

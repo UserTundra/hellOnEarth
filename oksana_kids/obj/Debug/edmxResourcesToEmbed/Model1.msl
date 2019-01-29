@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище bd_kidsModelContainer" CdmEntityContainer="bd_kidsEntitiesConn">
+    <EntitySetMapping Name="B01_testing_aims_to_tests">
+      <EntityTypeMapping TypeName="bd_kidsModel.B01_testing_aims_to_tests">
+        <MappingFragment StoreEntitySet="B01_testing_aims_to_tests">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code_aim" ColumnName="code_aim" />
+          <ScalarProperty Name="is_main_aim" ColumnName="is_main_aim" />
+          <ScalarProperty Name="id_test" ColumnName="id_test" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B02_study_courses_to_pupils_classes">
+      <EntityTypeMapping TypeName="bd_kidsModel.B02_study_courses_to_pupils_classes">
+        <MappingFragment StoreEntitySet="B02_study_courses_to_pupils_classes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code_course" ColumnName="code_course" />
+          <ScalarProperty Name="code_class" ColumnName="code_class" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B03_study_subjects_to_courses">
+      <EntityTypeMapping TypeName="bd_kidsModel.B03_study_subjects_to_courses">
+        <MappingFragment StoreEntitySet="B03_study_subjects_to_courses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code_course" ColumnName="code_course" />
+          <ScalarProperty Name="code_subject" ColumnName="code_subject" />
+          <ScalarProperty Name="serial_number_subject" ColumnName="serial_number_subject" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B04_test_tasks_to_study_subjects">
+      <EntityTypeMapping TypeName="bd_kidsModel.B04_test_tasks_to_study_subjects">
+        <MappingFragment StoreEntitySet="B04_test_tasks_to_study_subjects">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_task" ColumnName="id_task" />
+          <ScalarProperty Name="code_subject" ColumnName="code_subject" />
+          <ScalarProperty Name="equvivalent_perc" ColumnName="equvivalent_perc" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B05_testing_task_modules_to_tests">
+      <EntityTypeMapping TypeName="bd_kidsModel.B05_testing_task_modules_to_tests">
+        <MappingFragment StoreEntitySet="B05_testing_task_modules_to_tests">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_test" ColumnName="id_test" />
+          <ScalarProperty Name="id_module" ColumnName="id_module" />
+          <ScalarProperty Name="serial_number_module" ColumnName="serial_number_module" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R01_people_category">
+      <EntityTypeMapping TypeName="bd_kidsModel.R01_people_category">
+        <MappingFragment StoreEntitySet="R01_people_category">
+          <ScalarProperty Name="code_category" ColumnName="code_category" />
+          <ScalarProperty Name="name_category" ColumnName="name_category" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R02_pupils_classes">
+      <EntityTypeMapping TypeName="bd_kidsModel.R02_pupils_classes">
+        <MappingFragment StoreEntitySet="R02_pupils_classes">
+          <ScalarProperty Name="code_class" ColumnName="code_class" />
+          <ScalarProperty Name="name_class" ColumnName="name_class" />
+          <ScalarProperty Name="study_years" ColumnName="study_years" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R03_testing_types">
+      <EntityTypeMapping TypeName="bd_kidsModel.R03_testing_types">
+        <MappingFragment StoreEntitySet="R03_testing_types">
+          <ScalarProperty Name="code_type" ColumnName="code_type" />
+          <ScalarProperty Name="name_type" ColumnName="name_type" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R04_end_testing_reasons">
+      <EntityTypeMapping TypeName="bd_kidsModel.R04_end_testing_reasons">
+        <MappingFragment StoreEntitySet="R04_end_testing_reasons">
+          <ScalarProperty Name="code_end_reason" ColumnName="code_end_reason" />
+          <ScalarProperty Name="name_end_reason" ColumnName="name_end_reason" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R05_legal_ownership_forms">
+      <EntityTypeMapping TypeName="bd_kidsModel.R05_legal_ownership_forms">
+        <MappingFragment StoreEntitySet="R05_legal_ownership_forms">
+          <ScalarProperty Name="code_ownership" ColumnName="code_ownership" />
+          <ScalarProperty Name="name_ownership" ColumnName="name_ownership" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R06_testing_aims">
+      <EntityTypeMapping TypeName="bd_kidsModel.R06_testing_aims">
+        <MappingFragment StoreEntitySet="R06_testing_aims">
+          <ScalarProperty Name="code_aim" ColumnName="code_aim" />
+          <ScalarProperty Name="name_aim" ColumnName="name_aim" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R07_methodical_materials">
+      <EntityTypeMapping TypeName="bd_kidsModel.R07_methodical_materials">
+        <MappingFragment StoreEntitySet="R07_methodical_materials">
+          <ScalarProperty Name="id_method_material" ColumnName="id_method_material" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="file_location" ColumnName="file_location" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R08_study_courses">
+      <EntityTypeMapping TypeName="bd_kidsModel.R08_study_courses">
+        <MappingFragment StoreEntitySet="R08_study_courses">
+          <ScalarProperty Name="code_course" ColumnName="code_course" />
+          <ScalarProperty Name="name_course" ColumnName="name_course" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R09_study_subjects">
+      <EntityTypeMapping TypeName="bd_kidsModel.R09_study_subjects">
+        <MappingFragment StoreEntitySet="R09_study_subjects">
+          <ScalarProperty Name="code_subject" ColumnName="code_subject" />
+          <ScalarProperty Name="name_subject" ColumnName="name_subject" />
+          <ScalarProperty Name="academ_hours" ColumnName="academ_hours" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R10_next_action_variants">
+      <EntityTypeMapping TypeName="bd_kidsModel.R10_next_action_variants">
+        <MappingFragment StoreEntitySet="R10_next_action_variants">
+          <ScalarProperty Name="code_action" ColumnName="code_action" />
+          <ScalarProperty Name="name_action" ColumnName="name_action" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R11_variants_of_passing_tasks_results_analysis">
+      <EntityTypeMapping TypeName="bd_kidsModel.R11_variants_of_passing_tasks_results_analysis">
+        <MappingFragment StoreEntitySet="R11_variants_of_passing_tasks_results_analysis">
+          <ScalarProperty Name="code_variant" ColumnName="code_variant" />
+          <ScalarProperty Name="name_variant" ColumnName="name_variant" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R12_instructions_to_test_tasks_types">
+      <EntityTypeMapping TypeName="bd_kidsModel.R12_instructions_to_test_tasks_types">
+        <MappingFragment StoreEntitySet="R12_instructions_to_test_tasks_types">
+          <ScalarProperty Name="code_instruction" ColumnName="code_instruction" />
+          <ScalarProperty Name="name_instruction" ColumnName="name_instruction" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R13_play_result_variants">
+      <EntityTypeMapping TypeName="bd_kidsModel.R13_play_result_variants">
+        <MappingFragment StoreEntitySet="R13_play_result_variants">
+          <ScalarProperty Name="code_play_result" ColumnName="code_play_result" />
+          <ScalarProperty Name="name_play_result" ColumnName="name_play_result" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R14_track_types">
+      <EntityTypeMapping TypeName="bd_kidsModel.R14_track_types">
+        <MappingFragment StoreEntitySet="R14_track_types">
+          <ScalarProperty Name="code_type" ColumnName="code_type" />
+          <ScalarProperty Name="name_type" ColumnName="name_type" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R15_task_key_words">
+      <EntityTypeMapping TypeName="bd_kidsModel.R15_task_key_words">
+        <MappingFragment StoreEntitySet="R15_task_key_words">
+          <ScalarProperty Name="code_key_word" ColumnName="code_key_word" />
+          <ScalarProperty Name="name_key_word" ColumnName="name_key_word" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T01_personalities">
+      <EntityTypeMapping TypeName="bd_kidsModel.T01_personalities">
+        <MappingFragment StoreEntitySet="T01_personalities">
+          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+          <ScalarProperty Name="id_person" ColumnName="id_person" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="code_category" ColumnName="code_category" />
+          <ScalarProperty Name="id_org" ColumnName="id_org" />
+          <ScalarProperty Name="code_class" ColumnName="code_class" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="date_updating" ColumnName="date_updating" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T02_tests">
+      <EntityTypeMapping TypeName="bd_kidsModel.T02_tests">
+        <MappingFragment StoreEntitySet="T02_tests">
+          <ScalarProperty Name="id_test" ColumnName="id_test" />
+          <ScalarProperty Name="name_test" ColumnName="name_test" />
+          <ScalarProperty Name="id_method_material" ColumnName="id_method_material" />
+          <ScalarProperty Name="id_author" ColumnName="id_author" />
+          <ScalarProperty Name="date_create" ColumnName="date_create" />
+          <ScalarProperty Name="date_correct" ColumnName="date_correct" />
+          <ScalarProperty Name="max_passing_duration_sec" ColumnName="max_passing_duration_sec" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="id_teach_material" ColumnName="id_teach_material" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T03_testing_task_modules">
+      <EntityTypeMapping TypeName="bd_kidsModel.T03_testing_task_modules">
+        <MappingFragment StoreEntitySet="T03_testing_task_modules">
+          <ScalarProperty Name="id_module" ColumnName="id_module" />
+          <ScalarProperty Name="id_track" ColumnName="id_track" />
+          <ScalarProperty Name="id_av_track" ColumnName="id_av_track" />
+          <ScalarProperty Name="code_instruction" ColumnName="code_instruction" />
+          <ScalarProperty Name="id_task" ColumnName="id_task" />
+          <ScalarProperty Name="code_variant" ColumnName="code_variant" />
+          <ScalarProperty Name="id_comment" ColumnName="id_comment" />
+          <ScalarProperty Name="comment_view_duration_sec" ColumnName="comment_view_duration_sec" />
+          <ScalarProperty Name="max_passing_duration_sec" ColumnName="max_passing_duration_sec" />
+          <ScalarProperty Name="code_action" ColumnName="code_action" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T04_testing_tasks">
+      <EntityTypeMapping TypeName="bd_kidsModel.T04_testing_tasks">
+        <MappingFragment StoreEntitySet="T04_testing_tasks">
+          <ScalarProperty Name="id_task" ColumnName="id_task" />
+          <ScalarProperty Name="name_task" ColumnName="name_task" />
+          <ScalarProperty Name="id_author" ColumnName="id_author" />
+          <ScalarProperty Name="date_create" ColumnName="date_create" />
+          <ScalarProperty Name="date_correct" ColumnName="date_correct" />
+          <ScalarProperty Name="code_type" ColumnName="code_type" />
+          <ScalarProperty Name="file_location" ColumnName="file_location" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T05_test_passing_results">
+      <EntityTypeMapping TypeName="bd_kidsModel.T05_test_passing_results">
+        <MappingFragment StoreEntitySet="T05_test_passing_results">
+          <ScalarProperty Name="id_result" ColumnName="id_result" />
+          <ScalarProperty Name="id_person" ColumnName="id_person" />
+          <ScalarProperty Name="id_test" ColumnName="id_test" />
+          <ScalarProperty Name="date_testing" ColumnName="date_testing" />
+          <ScalarProperty Name="time_start" ColumnName="time_start" />
+          <ScalarProperty Name="time_end" ColumnName="time_end" />
+          <ScalarProperty Name="code_end_reason" ColumnName="code_end_reason" />
+          <ScalarProperty Name="amount_passing_tests" ColumnName="amount_passing_tests" />
+          <ScalarProperty Name="perc_totally_right" ColumnName="perc_totally_right" />
+          <ScalarProperty Name="perc_partially_right" ColumnName="perc_partially_right" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T06_teaching_materials">
+      <EntityTypeMapping TypeName="bd_kidsModel.T06_teaching_materials">
+        <MappingFragment StoreEntitySet="T06_teaching_materials">
+          <ScalarProperty Name="id_teach_material" ColumnName="id_teach_material" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="file_location" ColumnName="file_location" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T07_soundtracks">
+      <EntityTypeMapping TypeName="bd_kidsModel.T07_soundtracks">
+        <MappingFragment StoreEntitySet="T07_soundtracks">
+          <ScalarProperty Name="id_track" ColumnName="id_track" />
+          <ScalarProperty Name="name_track" ColumnName="name_track" />
+          <ScalarProperty Name="duration_sec" ColumnName="duration_sec" />
+          <ScalarProperty Name="id_announcer" ColumnName="id_announcer" />
+          <ScalarProperty Name="file_location" ColumnName="file_location" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T08_audio_video_tracks">
+      <EntityTypeMapping TypeName="bd_kidsModel.T08_audio_video_tracks">
+        <MappingFragment StoreEntitySet="T08_audio_video_tracks">
+          <ScalarProperty Name="id_av_track" ColumnName="id_av_track" />
+          <ScalarProperty Name="name_av_track" ColumnName="name_av_track" />
+          <ScalarProperty Name="code_type" ColumnName="code_type" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="duration_sec" ColumnName="duration_sec" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="image_size_pix" ColumnName="image_size_pix" />
+          <ScalarProperty Name="filesize" ColumnName="filesize" />
+          <ScalarProperty Name="date_create" ColumnName="date_create" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T09_comment_variants_on_passing_tasks">
+      <EntityTypeMapping TypeName="bd_kidsModel.T09_comment_variants_on_passing_tasks">
+        <MappingFragment StoreEntitySet="T09_comment_variants_on_passing_tasks">
+          <ScalarProperty Name="id_comment" ColumnName="id_comment" />
+          <ScalarProperty Name="code_play_result" ColumnName="code_play_result" />
+          <ScalarProperty Name="is_av_track" ColumnName="is_av_track" />
+          <ScalarProperty Name="file_location" ColumnName="file_location" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T10_organizations">
+      <EntityTypeMapping TypeName="bd_kidsModel.T10_organizations">
+        <MappingFragment StoreEntitySet="T10_organizations">
+          <ScalarProperty Name="id_org" ColumnName="id_org" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="short_name" ColumnName="short_name" />
+          <ScalarProperty Name="code_ownership" ColumnName="code_ownership" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="contact_info" ColumnName="contact_info" />
+          <ScalarProperty Name="web_site" ColumnName="web_site" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T11_task_answers">
+      <EntityTypeMapping TypeName="bd_kidsModel.T11_task_answers">
+        <MappingFragment StoreEntitySet="T11_task_answers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_task" ColumnName="id_task" />
+          <ScalarProperty Name="code_key_word" ColumnName="code_key_word" />
+          <ScalarProperty Name="string_value" ColumnName="string_value" />
+          <ScalarProperty Name="image_value" ColumnName="image_value" />
+          <ScalarProperty Name="sound_value" ColumnName="sound_value" />
+          <ScalarProperty Name="is_correct" ColumnName="is_correct" />
+          <ScalarProperty Name="group_no" ColumnName="group_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R00_decode">
+      <EntityTypeMapping TypeName="bd_kidsModel.R00_decode">
+        <MappingFragment StoreEntitySet="R00_decode">
+          <ScalarProperty Name="full_name_decode" ColumnName="full_name_decode" />
+          <ScalarProperty Name="name_decode" ColumnName="name_decode" />
+          <ScalarProperty Name="code_decode" ColumnName="code_decode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T01_1_pupils">
+      <EntityTypeMapping TypeName="bd_kidsModel.T01_1_pupils">
+        <MappingFragment StoreEntitySet="T01_1_pupils">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="date_updating" ColumnName="date_updating" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="short_name" ColumnName="short_name" />
+          <ScalarProperty Name="name_class" ColumnName="name_class" />
+          <ScalarProperty Name="name_category" ColumnName="name_category" />
+          <ScalarProperty Name="name_decode" ColumnName="name_decode" />
+          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="id_person" ColumnName="id_person" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T01_2_others">
+      <EntityTypeMapping TypeName="bd_kidsModel.T01_2_others">
+        <MappingFragment StoreEntitySet="T01_2_others">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="date_updating" ColumnName="date_updating" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="short_name" ColumnName="short_name" />
+          <ScalarProperty Name="name_category" ColumnName="name_category" />
+          <ScalarProperty Name="name_decode" ColumnName="name_decode" />
+          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="id_person" ColumnName="id_person" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
